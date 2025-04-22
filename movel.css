@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+:root{
+    --cor01: #52E379;
+    --cor02: #52E3DC;
+    --cor03: #52E3AB;
+    --cor04: #52BCE3;
+    --vermelho: red;
+    --amarelo: rgb(231, 202, 69);
+    --azul: rgb(97, 132, 177);
+    --laranja: rgba(199, 90, 39, 0.925);
+    --cinza: rgb(88, 84, 84);
+    --verde: rgb(84, 179, 47);
+
+
+}
+
+@media screen and (max-width: 999px){
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /***********************************
+    Estilização do corpo da página
+    *************************************/
+    body{
+        background-color: rgba(211, 216, 198, 0.336);
+    }
+
+    /***********************************
+    Estilização do cabeçalho
+    *************************************/
+    .cabecalho{
+        padding: 10px;
+        background-color: var(--cor03);
+        columns: 2;
+    }
+
+    .cabecalho ul li{
+        list-style-type: none;
+        display: flex; 
+        justify-content: center;
+        columns: 2;
+    }
+
+    .cabecalho ul li a{
+        text-decoration: none;
+        padding: 10px;
+        color: aliceblue;
+        font-size: 1rem;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.644);
+    }
+
+    .cabecalho ul li a:hover{
+        background-color: rgba(255, 255, 255, 0.384);
+        border-radius: 15px;
+    }
+
+    /***********************************
+    Estilização do Botão
+    *************************************/
+    .botao-voltar-topo{
+        padding: 10px;
+        border: 3px solid rgb(163, 158, 158);
+        position: fixed;  
+        bottom: 20px;
+        right: 20px;
+        border-radius: 15px;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.616);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.459);
+    }
+
+    .botao-voltar-topo a{
+        text-decoration: none;
+        color: white;
+    }
+
+    /***********************************
+    Estilização do Código HTML
+    *************************************/
+
+    code, pre{
+        width: 80vw;
+        contain: layout;
+        font-weight: bold;
+        color: white;
+        padding: 10px;
+    }
+
+    .code-html{
+        background-color: var(--cinza);
+        width: 85vw;
+        display: block;
+        margin: 15px auto;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.253);
+    }
+
+    .azul{
+        color: var(--azul);
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.116);
+    }
+
+    .laranja{
+        color: var(--laranja);
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.116);
+    }
+
+    .verde{
+        color: var(--verde);
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.116);
+    }
+
+    .amarelo{
+        color: var(--amarelo);
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.116);
+    }
+
+    /***********************************
+    Estilização dos parágrafos e títulos
+    *************************************/
+    p, h1, h2, h3{
+        padding: 15px;
+    }
+
+    main ul{
+        padding-left: 25px;
+        line-height: 25px;
+    }
+
+    h1{
+        background-color: rgba(0, 204, 255, 0.11);
+        margin: 15px;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.219);
+    }
+
+ 
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo 2.0</title>
+    <link rel="stylesheet" href="movel.css">
+</head>
+<body>
+    <header>
+        <!--*****************************
+        Cabeçalho da página
+        *********************************-->
+        <div id="topo" class="cabecalho">
+            <ul>
+                <li><a href="#HTML">HTML</a></li>
+                <li><a href="#Links">Links</a></li>
+                <li><a href="#img">Imagens e Vídeos</a></li>
+                <li><a href="#tabelas">Tabelas</a></li>
+                <li><a href="#css">CSS's</a></li>
+                <li><a href="#caixas">Modelos de Caixas</a></li>
+                <li><a href="#flexbox">Flex-Box</a></li>
+                <li><a href="#formularios">Formulários</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!--**********************************
+        Começando no HTML
+        **************************************-->
+        <div id="HTML">
+               
+             
+            <h1>Criando o código base</h1>
+                <p>Para começar, ao abrir o Visual Studio Code coloque um ponto de ! (exclamação) e aperte Enter, vai aparecer o seguinte código.</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+&lt;<span class="azul">DOCTYPE html</span>&gt;
+&lt;<span class="azul">html lang</span>=<span class="laranja">"en"</span>&gt;
+&lt;<span class="azul">head</span>&gt;
+&lt;<span class="azul">meta charset</span>=<span class="laranja">"UTF-8"</span>&gt;        
+&lt;<span class="azul">meta name</span>=<span class="laranja">"viewport"</span> <span class="azul">content</span>
+=<span class="laranja">"width=device-widthinitial-scale=1.0"</span>&gt;
+&lt;<span class="azul">title</span>&gt;Document&lt;/<span class="azul">title</span>&gt;
+&lt;/<span class="azul">head</span>&gt;
+&lt;<span class="azul">body</span>&gt;
+<p>Conteúdo do Site!</p>
+&lt;/<span class="azul">body</span>&gt;
+&lt;/<span class="azul">html</span>&gt;
+                    </pre>
+                </code>
+            </section>
+        
+                <ul>
+                    <li>Devemos mudar o parâmetro Html Lang para &lt;<span class="azul">html lang=</span><span class="laranja">"pt-br"</span>&gt;.</li>
+                    <li>Em <span class="azul">&lt;title&gt;</span> devemos colocar o título da nossa página, que será exibido na aba do navegador.</li>
+                    <li>Todo o conteúdo da página deverá ser colocado entre a tag <span class="azul">&lt;body&gt;&lt;/body&gt;</span>.</li>
+                    <li>Para colocar uma linha usa <span class="azul">&lt;hr&gt;</span></li>
+                    <li>Para quebrar a linha <span class="azul">&lt;br&gt;</span></li>
+                </ul>
+        
+        <!--Símbolos e Emojis-->
+        
+            <h2>Símbolos e Emoji</h2>
+                <ul>
+                    <li>Para  o símbolo de abre e fecha tag <span class="azul">(&lt;&gt;)</span> ser exibido na página, usa-se o código <span class="azul">& l t ;</span> (sem espaço) para abrir e <span class="azul">& g t</span> ; (sem espaço) para fechar. <!--LT= LESS THAN (menor que) / GT= Greather THAN (maior que )--></li>
+                    <li>Para adicionar um comentário usa <span class="verde">&lt; !-- comentário -- &gt;</span> o que estiver escrito entre os traços não será exibido na página. ou use o atalho: <button class="but-tec">CTRL</button> + <button class="but-tec">K</button> + <button class="but-tec">C</button></li>
+                    <li>Para o símbolo de Marca Registrada usa <span class="azul">(& reg)</span> &reg;</li>
+                    <li>Para Copyright <span class="azul">(& copy)</span> &copy;</li>
+                    <li>Para Trademark <span class="azul">(& trade)</span> &trade;</li>
+                    <li>Para Delta usa <span class="azul">(& Delta</span> iniciando em maiúsculo<span class="azul">)</span> &Delta;</li>
+                    <li>Para acesso à mais símbolos acesse o <a href="https://www.w3schools.com/charsets/ref_utf_symbols.asp" target="_blank" rel="external">Misc symbols</a> </li>
+                </ul>
+        
+        <!--Emojis-->
+        
+                <h3>Emoji</h3>
+                    <p>Para ter acesso ao EmojiPedia(biblioteca de emojis)  clique no <a href="https://emojipedia.org/" target="_blank" rel="external">link</a>.</p>
+                        <ul>
+                            <li>Entre no Link e escolha o emoji.</li>
+                            <li>Clique em informações técnicas e procure o código que começa com U+</li>
+                            <li>Copie o código sem o U+</li>
+                            <li>Para colocar o código use <span class="azul">&#x</span class="azul">(e o código) &#X1F432</li>
+                        </ul>
+        
+        <!--Favicon-->
+        
+            <h2>Favicon</h2>
+                <p>O Favicon, é um ícone que é exibido na aba do navegador, antes do título da página, deve sempre ser colocado dentro da Tag &lt;<span class="azul">head</span>&gt;</p>
+                    <ul>
+                        <li>Para criar o seu Favicon você vai no site <a href="https://favicon.io/" target="_blank" rel="external">favicon.io</a>, nesse site você pode criar seu ícone de favorito e baixar, sempre em formato .ico. </li>
+                        <li>Para ter acesso a biblioteca de ícones visite o site <a href="https://www.iconarchive.com/" target="_blank" rel="external">icon archive</a>.</li>
+                        <li>Para desenhar seu ícone vai em <a href="https://www.favicon.cc/" target="_blank" rel="external">favicon.cc</a> .</li>
+                        <li>Após criar o ícone crie a tag <span class="azul">link:Favicon</span>:
+                        <section class="code-html">
+                            <code>
+                                <pre>
+&lt;<span class="azul">link rel</span>=<span class="laranja">"shortcut icon"</span> 
+<span class="azul">href</span>=<span class="laranja">"favicon.ico"</span> 
+<span class="azul">type</span>=<span class="laranja">"image/x-icon"</span>&gt;
+                                    </pre>
+                                </code>
+                            </section>
+                        O Favicon deve estar salvo na sua pasta.
+                        </li>
+                    </ul>
+        
+        <!--Formatação-->
+        
+            <h2>Formatação</h2>
+                <ul>
+                    <li>Para usar <em>Itálico</em> use <span class="azul">&lt;em&gt;</span></li>
+                    <li>Para usar <strong>Negrito</strong> use <span class="azul">&lt;strong&gt;</span></li>
+                    <li>Para texto <ins>inserido ou sublinhado</ins> use <span class="azul">&lt;ins&gt;</span></li>
+                    <li>Para texto <del>Excluído</del> use <span class="azul">&lt;del&gt;</span> </li>
+                    <li>Para usar <mark>Marca Texto</mark> use <span class="azul">&lt;mark&gt;</span></li>
+                        <p>Para mudar a cor use &lt;<span class="azul">mark style</span>=<span class="laranja">"background-color: Cor;"</span>&gt;&lt;<span class="azul">/mark</span>&gt;</p>
+                    <li>Para texto <sup>Sobescrito</sup> use <span class="azul">&lt;sup&gt;</span></li>
+                        <p>Ex: x<sup>2</sup>+b<sup>5</sup>+c<sup>3</sup>=0</p>
+                    <li>Para texto <sub>Subescrito</sub> use <span class="azul">&lt;sub&gt;</span></li>
+                        <p>Ex: Fórmula química do ácido Sulfúrico: H<sub>2</sub>SO<sub>4</sub> </p>
+                    <li>Para exibir código Fonte use <span class="azul">&lt;code&gt;</span> com a tag &lt;pre&gt; dentro:  </li>
+                        <p><span class="azul">&lt;code&gt;</span><br>
+                    <span class="azul">&lt;pre&gt;</span>Código<span class="azul">&lt;/pre&gt;</span><br>
+                    <span class="azul">&lt;/code&gt;</span></p>
+                    <li>Quando indicar um endereço use <span class="azul">&lt;adress&gt;</span></li>
+                        <p>EX: <adress>Rua das Acácias 225 - Belo Horizonte - MG</adress></p>
+                    <li>Para <abbr title="Exemplo de Abreviação">Abreviações</abbr> use <span class="azul">&lt;abbr&gt;</span></li>
+                    <li>Para citações simples use <spa class="azul">&lt;q&gt;</span></li>
+                        <p>Ex: <q>Só sei que nada sei.</q></p>
+                </ul>
+        
+        <!--listas-->
+        
+            <h2>Listas</h2>
+        
+            <ul>
+                <li>Para cada item de uma lista use <span class="azul">&lt;li&gt;</span></li>
+            </ul>
+        
+            <h3>listas Ordenadas</h3>
+        
+                <p>Use a tag <span class="azul">&lt;ol&gt;</span> Para criar uma lista ordenada: </p>
+        
+                <section class="code-html">
+                    <code>
+                        <pre>
+<span class="azul">&lt;ol&gt;</span>
+<span class="azul">&lt;li&gt;</span>Arroz<span class="azul">&lt;/li&gt;</span>
+<span class="azul">&lt;li&gt;</span>Café<span class="azul">&lt;/li&gt;</span>
+<span class="azul">&lt;li&gt;</span>Açúcar<span class="azul">&lt;/li&gt;</span>
+<span class="azul">&lt;li&gt;</span>Pão<span class="azul">&lt;/li&gt;</span>
+<span class="azul">&lt;/ol&gt;</span>
+                        </pre>
+                    </code>
+                </section>
+        
+                <p>O resultado deve ser exibido assim:</p>
+                    <ol>
+                        <li>Arroz</li>
+                        <li>Café</li>
+                        <li>Açucar</li>
+                        <li>Pão</li>
+                    </ol>
+        
+                <p>Podemos mudar o tipo do índice com a tag <span class="azul">&lt;type&gt;.</span></p>
+                <p>Os tipos aceitos são 1 A a I i</p>
+                    <ul>
+                        <li>1 para números</li>
+                        <li>A (maiúsculo) para letras maiúsculas.</li>
+                        <li>a (minúsculo) para letras minúsculas.</li>
+                        <li>I (maiúsculo) para números romanos maiúsculos.</li>
+                        <li>i (minúsculo) para números romanos maiúsculos.</li>
+                    </ul>
+        
+            <h3>Listas Não Ordenadas</h3>      
+        
+                <p>Para listas não ordenadas use <span class="azul">&lt;ul&gt;</span></p>
+        
+                    <section class="code-html">
+                        <code>
+                            <pre>
+<span class="azul">&lt;ul&gt;</span>
+<span class="azul">&lt;li&gt;</span>Arroz<span class="azul">&lt;/li&gt;</span> 
+<span class="azul">&lt;li&gt;</span>Café<span class="azul">&lt;/li&gt;</span> 
+<span class="azul">&lt;li&gt;</span>Açúcar<span class="azul">&lt;/li&gt;</span> 
+<span class="azul">&lt;li&gt;</span>Pão<span class="azul">&lt;/li&gt;</span> 
+<span class="azul">&lt;/ul&gt;</span>
+                            </pre>
+                        </code>
+                    </section>
+        
+                <p>O resultado deve ser exibido assim:</p>
+        
+                    <ul>
+                        <li>Arroz</li>
+                        <li>Café</li>
+                        <li>Açúcar</li>
+                        <li>Pão</li>
+                    </ul>
+                            <p>Também podemos mudar o tipo do índice com a tag <span class="azul">&lt;type&gt;.</span></p>
+                            <p>Os tipos aceitos são:</p>
+                    <ul>
+                        <li>Disc para um disco preenchido </li>
+                        <li>Circle para um círculo não preenchido</li>
+                        <li>Square para um quadrado</li>
+                    </ul>
+        
+            <h3>Lista De Definição</h3>
+        
+                <ul>
+                    <li>Para criar a lista de definição use a tag <span class="azul">&lt;dl&gt;</span></li>
+                    <li>Para criar o item use a tag <span class="azul">&lt;dt&gt;</span></li>
+                    <li>Para criar a descrição use a tag <span class="azul">&lt;dd&gt;</span></li>
+                </ul>
+                <p>Exemplo:</p>
+        
+                <section class="code-html">
+                    <code>
+                        <pre>
+&lt;<span class="azul">dl</span>&gt;
+&lt;<span class="azul">dt</span>&gt;Arroz&lt;<span class="azul">/dt></span>&gt;
+&lt;<span class="azul">dd</span>&gt;Água, Arroz, óleo, alho, sal&lt;<span class="azul">/dd></span>&gt;
+&lt;<span class="azul">dt</span>&gt;Feijão&lt;<span class="azul">/dt></span>&gt;
+&lt;<span class="azul">dd</span>&gt;Água, Feijão, Óleo, Sal&lt;<span class="azul">/dd></span>&gt;
+&lt;<span class="azul">/dl</span>&gt;
+                        </pre>
+                    </code>
+                </section>
+        
+                <p>O resultado deve ser exibido assim:</p>
+        
+                <dl>
+                    <dt>Arroz</dt><dd>Água, Arroz, óleo, alho, sal</dd>
+                    <dt>Feijão</dt><dd>Água, Feijão, Óleo, Sal</dd>
+                </dl>
+        
+        <!--Escondendo uma lista-->
+        
+            <h3>Escondendo uma lista</h3>
+        
+                <p>Podemos esconder uma lista com a tag <span class="azul">&lt;details&gt;</span>.</p>
+                <p>Para definir o que será exibido usamos a tag <span class="azul">&lt;summary&gt;</span>.</p>
+                <p>Exemplo de código:</p>
+        
+                <section class="code-html">
+                    <code>
+                        <pre>
+&lt;<span class="azul">details</span>&gt;
+&lt;<span class="azul">summary</span>&gt;<abbr title="Título que vai ser exibido">Clique aqui para ver a lista</abbr>
+&lt;<span class="azul">/summary</span>&gt;
+&lt;<span class="azul">ul</span>&gt;
+&lt;<span class="azul">li</span>&gt;Pão&lt;<span class="azul">/li</span>&gt;
+&lt;<span class="azul">li</span>&gt;Café&lt;<span class="azul">/li</span>&gt;
+&lt;<span class="azul">li</span>&gt;Arroz&lt;<span class="azul">/li</span>&gt;
+&lt;<span class="azul">li</span>&gt;Macarrão&lt;<span class="azul">/li</span>&gt;
+&lt;<span class="azul">/ul</span>&gt;
+&lt;<span class="azul">/details</span>&gt;
+                        </pre>
+                    </code>
+                </section>
+        
+                <p>O resultado deve ser exibido assim:</p>
+        
+                    <details>
+                        <summary>Clique aqui para ver a lista</summary>
+                            <ul>
+                                <li>Pão</li>
+                                <li>Café</li>
+                                <li>Arroz</li>
+                                <li>Macarrão</li>
+                            </ul>       
+                    </details>
+        </div>
+
+        
+        <!--**********************************
+        Links
+        **************************************-->
+        <div id="Links">
+            <h1>Colocando links na página</h1>
+
+                <h2>Links</h2>
+
+        <ul>
+            <li>A tag Para link é a <span class="azul">&lt;a&gt;</span></li>
+                <p>Exemplo:
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="azul">&lt;a href</span>=<span class="laranja">"youtube.com"&gt;</span>YouTube<span class="azul">&lt;/a&gt;</span>
+                    </pre>
+                </code>
+        </section>
+                <a href="youtube.com" target="_blank" rel="external">Youtube.com</a></p>
+            <li>Sempre que for usar um link externo use <span class="azul">target</span>=<span class="laranja">"_blank"</span></li>
+                <p>Exemplo:
+
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="azul">&lt;a href</span>=<span class="laranja">"youtube.com" <span class="azul">target</span>=<span class="laranja">"_blank"</span>&gt;
+</span>YouTube<span class="azul">&lt;/a&gt;</span>
+                    </pre>
+                </code>
+            </section>
+                </p>Se o link for para o seu próprio site use <span class="azul">target</span>=<span class="laranja">"_self"</span></p>
+            <li>Use também o <span class="azul">rel<span class="laranja">""</span></span></li>
+                <p>Exemplo:</p>
+
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="azul">&lt;a href</span>=<span class="laranja">"youtube.com" <span class="azul">target</span>=<span class="laranja">"_blank"</span> 
+<span class="azul">rel<span class="laranja">"external"</span></span></li>&gt;</span>YouTube<span class="azul">&lt;/a&gt;</span>
+                    </pre>
+                </code>
+            </section>
+                
+            
+                <ul>
+                    <li>Use <em class="azul">external</em> para um site externo</li>
+                    <li><em class="azul">Next</em> ou <em class="azul">Prev</em> para o seu próprio site</li>
+                    <li><em class="azul">Unfollow</em> para sites duvidosos</li>
+                </ul>
+        </ul>
+
+            <h3>Link para Download</h3>
+                <p>Use a mesma tag <span class="azul">&lt;a&gt;</span></p>
+                <p>
+                Exemplo:
+                <section class="code-html">
+                    <code>
+                        <pre>
+                            <span style="font-size: 0.8em;">
+&lt;<span class="azul">a href</span>=<ins class="laranja"><span class="laranja">"Dowwnloads/curriculo Rafael.pdf"</span></ins>
+<span class="azul">download</span>=<span class="laranja">"Dowwnloads/curriculo-Rafael.pdf"</span> <span class="azul">
+type</span>=<span class="laranja">"aplication/pdf"</span>&gt;Currículo Rafael<span class="azul">&lt;/a&gt;</span>
+                            </span>
+                        </pre>  
+                    </code>
+                </section>
+                </p>
+
+        <a href="downloads/curriculo Rafael.pdf" download="downloads/curriculo Rafael.pdf" type="aplication/pdf">Currículo Rafael</a>
+
+
+            <p>Para verificar os diferentes tipos de Type, visite <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">iana.org</a></p>
+
+        </div>
+
+        <!--**********************************
+        Imagens
+        **************************************-->
+        <div id="img">
+            <h1>Imagens</h1>
+                <p>No CSS, o whidth (tamanho) da imagem, deve sempre ter 100%</p>
+                    <ul>
+                        <li>Sempre faça 3 tamanhos da imagem e salve na pasta imagens, isso serve para diferentes tamanhos de telas.</li>
+                        <li>A tag de imagem é <span class="azul">&lt;picture&gt;</span></li>
+                        <li>Dentro da tag <span class="azul">&lt;picture&gt;</span> usa a tag <span class="azul">&lt;img&gt;</span></li>
+                        <li>Para definir os tamanhos de imagem, use <span class="azul">&lt;source:media:type&gt;</span> listando os tamanhos das imagens da menor para a maior.</li>
+                    </ul>
+        
+            <section class="code-html"> 
+                <code>
+                    <pre>
+                        
+<span class="azul">&lt;picture&gt;</span>
+
+<span class="azul">&lt;source media</span>=<span class="laranja">"(<mark>max</mark>-whidth: 750px)"</span> 
+<span class="azul">srcset</span>= <span class="laranja">"local do arquivo"</span> 
+<span class="azul">type</span>=<span class="laranja">"tipo da imagem"</span>&gt;
+
+<span class="azul">&lt;source media</span>=<span class="laranja">"(<mark>max</mark>-whidth: 1050px)"</span> 
+<span class="azul">srcset</span>= <span class="laranja">"local do arquivo"</span> 
+<span class="azul">type</span>=<span class="laranja">"tipo da imagem"</span>&gt;
+<span class="azul">&lt;img src</span>= <span class="laranja">"local da imagem"</span> 
+<span class="azul">alt</span>= <span class="laranja">"texto alternativo"<span><span class="azul">&gt;</span>
+
+<span class="azul">&lt;picture&gt;</span>
+                        
+                    </pre>
+                </code>
+            </section>
+        
+            <ul>
+                <li>Sempre modifique o termo em destaque, ele vem por padrão com <mark>MIN</mark>, coloque <mark>Max</mark>.</li>
+                <li>Sempre atente a ordem do tamanho das imagens, na tag <span class="azul">&lt;img&gt;</span> fica o tamanho original da imagem, que deve ficar na base, depois cololque os tamanhos menores.</li>
+            </ul>
+        
+            <h1>Vídeos</h1>
+        
+                <p>Para baixar vídeos livre de direitos autorais, use o site <a href="https://www.pexels.com/pt-br/" target="_blank" rel="external"> Pexels</a> ou o <a href="https://www.youtube.com/" target="_blank" rel="external">Youtube</a>.</p>
+        
+                <p>Para incorporar vídeos do <a href="https://www.youtube.com/" target="_blank" rel="external">Youtube</a> encontre o vídeo e clique em incorporar, depois é só colar no seu código.</p>
+                
+        
+                <iframe width="350vw" height="315" src="https://www.youtube.com/embed/5jFJoWegTv8?si=RygoqP6mJOI8E5N6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+        
+                <p>Para colocar um vídeo que esteja hospedado localmente usa a tag <span class="azul">&lt;video&gt;</span></p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+&lt;<span class="azul">video controls width</span>=<span class="laranja">"tamanho do vídeo"</span>&gt;
+<span class="azul">&lt;/video&gt;</span>
+
+&lt;<span class="azul">source srcset</span>=<span class="laranja">"local do vídeo"</span> 
+<span class="azul">type</span>=<span class="laranja">"video/formato do vídeo"&gt;</span>
+                    </pre>
+                </code>
+            </section>
+        
+        </div>
+
+        <!--**********************************
+        Tabelas
+        **************************************-->
+        <div id="tabelas">
+            <h1>Tabelas</h1>
+        
+                <ul>
+                    <li>Para definir uma tabela use a tag <span class="azul">&lt;table&gt;</span>.</li>
+                    <li>Para definir um Cabecalho para a tabela use a tag <span class="azul">&lt;thead&gt;</span>, para definir as linhas do cabeçalho, use a tag <span class="azul">&lt;th&gt;</span>.</li>
+                    <li>Para definir o Corpo da tabela use a tag <span class="azul">&lt;tbody&gt;</span>.</li>
+                    <li>Para definir o rodapé da tabela use a tag <span class="azul">&lt;tfoot&gt;</span>.</li>
+                    <li>Cada linha da tabela é definida pela tag <span class="azul">&lt;tr&gt; </span>(Table Row).</li>
+                    <li>cada coluna é definida pela tag  <span class="azul">&lt;td&gt;</span>(Dado da Tabela).</li>
+                    <li>Para definir uma borda para a tabela use a definição na tag, <span class="azul">&lt;table&gt;</span>, <span class="laranja">border</span>. É uma definição obsoleta, o ideal é fazer a configuração pelo CSS.</li>    
+                </ul>
+        
+                    <p>Exemplo de Código:</p>
+                    <p>Passe o mouse nos pontilhados para explicação;</p>
+        
+                <section class="code-html">
+                    <code >
+                        <pre>
+&lt;<span class="azul"><abbr title="Tag de abertura da tabela">table</abbr></span> <span style="color: red"><abbr title="Está em vermelho pois está obsoleta">border</abbr></span>=<span class="ama">"1"</span>&gt;
+    &lt;<span class="azul"><abbr title="Tag de abertura do cabeçalho">thead</abbr></span>&gt;
+        &lt;<span class="azul"><abbr title="Tag para o título de cada coluna do cabeçalho.">th</abbr></span>&gt;Filme&lt;<span class="azul">/th</span>&gt;
+        &lt;<span class="azul">th</span>&gt;Ano de Lançamento&lt;<span class="azul">/th</span>&gt;
+        &lt;<span class="azul">th</span>&gt;Avaliação&lt;<span class="azul">/th</span>&gt;
+    &lt;<span class="azul"><abbr title="Fechamento do cabeçalho da tabela">/thead</abbr></span>&gt;
+
+    &lt;<span class="azul"><abbr title="Abertura do Corpo da Tabela">tbody</abbr></span>&gt;
+        &lt;<span class="azul"><abbr title="Definição de cada linha da tabela">tr</abbr></span>&gt;
+            &lt;<span class="azul"><abbr title="Dado de cada coluna da tabela">td</abbr></span>&gt;Homem de Ferro&lt;<span class="azul">/td</span>&gt;
+            &lt;<span class="azul">td</span>&gt;2008&lt;<span class="azul">/td</span>&gt;
+            &lt;<span class="azul">td</span>&gt;8,9&lt;<span class="azul">/td</span>&gt;
+        &lt;<span class="azul">/tr</span>&gt;
+
+        &lt;<span class="azul">tr</span>&gt;
+            &lt;<span class="azul">td</span>&gt;Thor&lt;<span class="azul">/td</span>&gt;
+            &lt;<span class="azul">td</span>&gt;2010&lt;<span class="azul">/td</span>&gt;
+            &lt;<span class="azul">td</span>&gt;8,0&lt;<span class="azul">/td</span>&gt;
+        &lt;<span class="azul">/t</span>r&gt;
+
+        &lt;<span class="azul">tr</span>&gt;
+            &lt;<span class="azul">td</span>&gt;Vingadores&lt;<span class="azul">/td</span>&gt;
+            &lt;<span class="azul">td</span>&gt;2012&lt;<span class="azul">/td</span>&gt;
+            &lt;<span class="azul">td</span>&gt;10&lt;<span class="azul">/td</span>&gt;
+        &lt;<span class="azul">/tr</span>&gt;
+
+    &lt;<span class="azul"><abbr title="Tag de abertura do rodapé">tfoot</abbr></span>&gt;
+        &lt;<span class="azul">td</span> <span style="color:aqua"><abbr title="Significa a quantidade de colunas que vai ser ocupado">colspan</abbr></span>=<span class="laranja">"3"</span>&gt;Filmes da Marvel
+        &lt;<span class="azul">/td</span>&gt;
+
+    &lt; <span class="azul">/tfoot</span> &gt;
+    &lt;<span class="azul">/tbody</span> &gt;
+&lt;<span class="azul">/table</span> &gt;
+                        </pre>
+                    </code>
+                </section>
+        
+            <p>O resultado deve ser exibido assim:</p>
+        
+                <table border="1">
+                    <thead>
+                        <th>Filme</th>
+                        <th>Ano de Lançamento</th>
+                        <th>Avaliação</th>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <td>Homem de Ferro</td>
+                            <td>2008</td>
+                            <td>8,9</td>
+                        </tr>
+        
+                        <tr>
+                            <td>Thor</td>
+                            <td>2010</td>
+                            <td>8,0</td>
+                        </tr>
+        
+                        <tr>
+                            <td>Vingadores</td>
+                            <td>2012</td>
+                            <td>10</td>
+                        </tr>
+        
+                    <tfoot>
+                        <td colspan="3">Filmes da Marvel</td>
+        
+                    </tfoot>
+                    </tbody>
+                </table>
+        
+                <p>Para definir um efeito zebrado na tabela, utiliza uma Pseudo classe.</p>
+        
+                <section class="code-html">
+                    <code>
+                        <pre>
+<span class="laranja">tbody tr:nth-child(</span>2n<span class="laranja">){</span>
+<span class="azul">background-color</span>: <span class="laranja"> Defina uma cor</span>;
+<span class="laranja">}</span>
+                        </pre>
+                    </code>
+                </section>
+                <p>Para intervalos de 2 em 2, ao invéz de usar um número, use <span class="ame">ODD</span>, (Par) ou <span class="ame">EVEN</span>, (Ímpar)</p>
+        
+                <p>Para fixar o cabeçalho da tabela no topo da página, serve para tabelas grandes.</p>
+        
+                <p>A tabela tem que ter nas CSS's a <strong><span class="azul">position</span>: <span class="ama">relative;</span></strong></p>
+        
+                <section class="code-html">
+                    <code>
+                        <pre>
+<span class="amarelo">thead > tr > th{</span>
+<span class="azul">position</span>: <span class="laranja">sticky;</span>
+<span class="azul">top</span>: <span class="laranja"
+a>0</span>;
+<span><span class="azul">background-color</span>: <span class="laranja">"defina uma cor"
+(a mesma do Thead);</span>
+<span class="amarelo">}</span>
+                        </pre>
+                    </code>
+                </section>
+        
+            <p>Para configurar uma coluna especifica usa a tag do HTML <span class="azul">&lt;colgroup&gt;</span></p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+                        
+        <span class="azul">&lt;colgroup&gt;</span>
+            <span class="azul">&lt;col class</span>=<span class="ama">"nome"</span>&gt;
+            <span class="azul">&lt;col class</span>=<span class="ama">"sexo"</span>&gt;
+            <span class="azul">&lt;col class</span>=<span class="ama">"idade"</span>&gt;
+            <span class="azul">&lt;col class</span>=<span class="ama">"profissao"</span>&gt;
+        <span class="azul">&lt;/colgroup&gt;</span>
+                    </pre>
+                </code>
+            </section>
+        
+            <p>Para fazer a tabela ficar mais responsiva usa a definição <span class="azul">overflow-x</span></p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+        <p>No Html, envelopa a tabela em uma Caixa (div ou section)</p>
+        &lt;<span class="azul">div id</span>=<span class="ama">"container"</span>&gt;
+            &lt;<span class="azul">table</span>&gt;...
+            &lt;<span class="azul">/table</span>&gt;
+        &lt;<span class="azul">/div</span>&gt;
+        
+        <p>Nas CSS's coloque a definição:</p>
+        <span class="ame">#container{</span>
+        <span class="azul">overflow-x</span>: <span class="ama">auto;</span>
+        <span class="ame">}</span>   
+                    </pre>
+                </code>
+            </section>
+        
+        </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    <button class="botao-voltar-topo"><a href="#topo">Voltar ao topo</a></button>
+    </main>
+</body>
+</html>
