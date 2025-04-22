@@ -11,6 +11,7 @@
     --laranja: rgba(199, 90, 39, 0.925);
     --cinza: rgb(88, 84, 84);
     --verde: rgb(84, 179, 47);
+    --rosa: rgb(241, 117, 225);
 
 
 }
@@ -124,6 +125,12 @@
         background-color: rgba(0, 0, 0, 0.116);
     }
 
+    .rosa{
+        color: var(--rosa);
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.116);
+    }
+
     /***********************************
     Estilização dos parágrafos e títulos
     *************************************/
@@ -143,6 +150,96 @@
         border-radius: 15px;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.219);
     }
+
+    /***********************************
+    Estilização do botão do Google Fonts
+    *************************************/
+
+    .botao-azul{
+        background-color: #1E64D4;
+        color: white;
+        padding: 8px;
+        border: none;
+        border-radius: 15px;
+    }
+    
+    /***********************************
+    Estilização do teste do botão
+    *************************************/
+    .teste-de-botao{
+        background-color: black;
+        color: white;
+        margin: auto;
+        width: 100px;
+        height: 50px;
+        display: block;            
+    }
+            
+    .teste-de-botao:hover{
+        background-color: rgb(248, 248, 141);
+        color: rgb(8, 8, 8);
+    }
+
+
+    /***********************************
+    Estilização dos links do exemplo
+    *************************************/
+    #links-resultado a{
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+    }
+                
+    #links-resultado a:visited{
+        color: yellow;
+    }
+        
+    #links-resultado a:hover{
+        text-decoration: underline;
+        color: black;
+    }
+                
+    #links-resultado a:active{
+        color: rgb(15, 243, 83);
+    }
+
+    /***********************************
+    Estilização dos blocos da parte do Flexbox
+    *************************************/
+    .bloco-1{
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #8bdfdd;
+        color: white;
+        padding: 3px;
+        margin: 10px;
+    }
+
+    .bloco-2{
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #aadf8b;
+        color: white;
+        padding: 3px;
+        margin: 10px;
+    }
+
+    .bloco-3{
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #df8bd8;
+        color: white;
+        padding: 3px;
+        margin: 10px;
+    }
+       
+    
 
  
 

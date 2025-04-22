@@ -18,7 +18,6 @@
                 <li><a href="#img">Imagens e Vídeos</a></li>
                 <li><a href="#tabelas">Tabelas</a></li>
                 <li><a href="#css">CSS's</a></li>
-                <li><a href="#caixas">Modelos de Caixas</a></li>
                 <li><a href="#flexbox">Flex-Box</a></li>
                 <li><a href="#formularios">Formulários</a></li>
             </ul>
@@ -31,8 +30,7 @@
         <!--**********************************
         Começando no HTML
         **************************************-->
-        <div id="HTML">
-               
+        <div id="HTML">             
              
             <h1>Criando o código base</h1>
                 <p>Para começar, ao abrir o Visual Studio Code coloque um ponto de ! (exclamação) e aperte Enter, vai aparecer o seguinte código.</p>
@@ -550,12 +548,12 @@ a>0</span>;
                 <code>
                     <pre>
                         
-        <span class="azul">&lt;colgroup&gt;</span>
-            <span class="azul">&lt;col class</span>=<span class="ama">"nome"</span>&gt;
-            <span class="azul">&lt;col class</span>=<span class="ama">"sexo"</span>&gt;
-            <span class="azul">&lt;col class</span>=<span class="ama">"idade"</span>&gt;
-            <span class="azul">&lt;col class</span>=<span class="ama">"profissao"</span>&gt;
-        <span class="azul">&lt;/colgroup&gt;</span>
+<span class="azul">&lt;colgroup&gt;</span>
+    <span class="azul">&lt;col class</span>=<span class="laranja">"nome"</span>&gt;
+    <span class="azul">&lt;col class</span>=<span class="laranja">"sexo"</span>&gt;
+    <span class="azul">&lt;col class</span>=<span class="laranja">"idade"</span>&gt;
+    <span class="azul">&lt;col class</span>=<span class="laranja">"profissao"</span>&gt;
+<span class="azul">&lt;/colgroup&gt;</span>
                     </pre>
                 </code>
             </section>
@@ -565,23 +563,1135 @@ a>0</span>;
             <section class="code-html">
                 <code>
                     <pre>
-        <p>No Html, envelopa a tabela em uma Caixa (div ou section)</p>
-        &lt;<span class="azul">div id</span>=<span class="ama">"container"</span>&gt;
-            &lt;<span class="azul">table</span>&gt;...
-            &lt;<span class="azul">/table</span>&gt;
-        &lt;<span class="azul">/div</span>&gt;
+<p>No Html, envelopa a tabela em uma Caixa 
+(div ou section)</p>
+    &lt;<span class="azul">div id</span>=<span class="laranja">"container"</span>&gt;
+        &lt;<span class="azul">table</span>&gt;...
+        &lt;<span class="azul">/table</span>&gt;
+    &lt;<span class="azul">/div</span>&gt;
         
         <p>Nas CSS's coloque a definição:</p>
-        <span class="ame">#container{</span>
-        <span class="azul">overflow-x</span>: <span class="ama">auto;</span>
-        <span class="ame">}</span>   
+    <span class="amarelo">#container{</span>
+    <span class="azul">overflow-x</span>: <span class="laranja">auto;</span>
+    <span class="amarelo">}</span>   
+                </pre>
+            </code>
+        </section>
+        
+        </div>
+
+        <!--**********************************
+        Começando nas CSS's
+        **************************************-->      
+        <div id="css">
+            <h1>Começando nas CSS</h1>
+        
+                <h2>Linear Gradiente (degradê no fundo do site)</h2>
+        
+                <p>Para criar uma definição global use:</p> 
+        
+                <section class="code-html">
+                    <code>
+                        <pre>
+<span class="amarelo">*{</span>
+<span class="azul">margin</span> <span class="laranja">0;</span>
+<span class="azul">padding</span> <span class="laranja">0;</span>
+<span class="azul">box-sizing</span> <span class="laranja">border-box;</span>
+<span class="amarelo">}</span>
+                        </pre>
+                    </code>
+                </section>
+                    <p>Onde, margin e padding, zeram todos os espaços que possam existir, facilitando a configuração dos espaços de forma correta, e box-sizing é para facilitar a configuração de caixas.</p>
+        
+                <p>Para criar um link para as folhas de estilo use a opção <span class="azul">link:css</span> </p>
+                <p>Coloque a regra </p>
+
+                    <section class="code-html">
+                        <code>
+                            <pre>
+    <span class="rosa">@charset</span> <span class="amarelo">"UTF8";</span>
+                            </pre>
+                        </code>
+                    </section>
+        
+                <p>Para definir uma cor para o Background do Site, use a definição:</p>
+        
+                <section class="code-html">
+                    <code>
+                        <pre>
+<span class="azul">background-color</span>: <span class="laranja">"defina a cor"</span>
+                        </pre>
+                    </code>
+                </section>
+        
+                <p>Para definir um degradê no fundo do site use a definição:</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="azul">background-image:</span> <span class="verde">linear-gradient</span>
+(<span class="laranja"></span> sentido, <span class="laranja">cor1, cor2, cor3</span>);
                     </pre>
                 </code>
             </section>
         
+                <p>Você pode definir uma cor, e a última opção ser <span class="ama">transparent</span>, para  a cor ir da definida até a trasnparência.</p>
+                <p>Para Extrair as cores de um Gradiente use o site <a href="https://color.adobe.com/pt/create/color-wheel" target="_blank" rel="externo">Adobe Color</a>, na opção de Extrair Gradiente.</p>
+                <p>Você pode definir a % que uma cor vai ocupar no Graditente, colocando uma % depois da Cor.</p>
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="azul">background-image:</span> <span class="verde">linear-gradient</span> 
+(<span class="laranja">to top</span> (sentido), 
+<span class="laranja">cor1 10%, cor2 20%, cor3 70%</span>);
+                    </pre>
+                </code>
+            </section>
+        
+                <h2>Para definir uma imagem como fundo do site, ou de uma <span class="azul">&lt;div&gt;</span></h2>
+                    <p>Para usar uma imagem de fundo do site, ou de uma <span class="azul">&lt;div&gt;</span> específica, voce usa a propriedade:</p>
+        
+                    <section class="code-html">
+                        <code>
+                            <pre>
+<span class="azul">background-image:</span>url ('local da imagem');
+
+<span class="azul">background-size:</span> <span class="laranja">defina valor 1 / 
+defina valor 2;</span>
+
+<span class="azul">background-repeat:</span> <span class="laranja">para definir se a 
+imagem vai se repetir ou não;</span>
+
+<span class="azul">background-position:</span> <span class="laranja">posição 1(coluna) / 
+posição 2(linha);</span>
+
+<span class="azul">background-size:</span> <span class="laranja">cover 
+(para a imagem ocupar a tela inteira);</span>
+
+<span class="azul">background-attchment:</span> <span class="laranja">fixed (para a 
+imagem se fixar na tela);</span>
+                            </pre>
+                        </code>
+                    </section>
+        
+            <h2>Variáveis</h2>
+        
+                <p>Crie uma variável para facilitar na estilização do site. Você pode definir variáveis para fontes e cores. a variável sempre deve começar com --(dois traços), depois coloque o nome da variável, ex: cor0. Depois coloque a configuração da variável. Tudo isso deve ficar dentro de um seletor :root.</p>
+        
+            <section class="code-html">
+                <code >
+                    <pre>
+<span class="amarelo">:root{</span>
+<span class="azul">--cor01</span>: <span class="laranja">#fffff;</span>
+<span class="azul">--fonte-padrão</span>: <span class="laranja">Arial, 
+Helvetica, sans-serif;</span>
+<span class="amarelo">}</span>
+                    </pre>
+                </code>
+            </section>
+        
+            <p>Utilize a variável para as configurações de cores de fonte e background.</p>
+        
+            <h2>Google Fonts</h2>
+                <p>Para usar fontes externas, acesse o <a href="https://fonts.google.com/" target="_blank
+                " rel="external">Google-Fonts</a></p>
+                <p>Escolha a fonte e clique em <button class="botao-azul">Get Font</button></p>
+                <p>Clique em <button class="botao-azul">&lt;&gt; Get embed code</button>, em seguida em @import.</p>
+                <p>Copie o código e coloque no <span class="azul">&lt;style&gt;.</p></span>
+                <p>Se o nome da classe tiver espaço coloque entre aspas simples ' '
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="azul">font-family:</span> <span class="laranja">'passion one';</span>
+                    </pre>
+                </code>
+            </section>
+                </p>
+        
+            <h2>Fontes</h2>
+        
+                <p>Para Mudar o estilo da fonte use a definição:
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="azul">font-family</span>:<span class="laranja"> "tipo da fonte"</span>;
+                    </pre>
+                </code>
+            </section>
+        
+            Sempre coloque mais do que uma combinação de fonte. Ex:
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="azul">font-family:</span> <span class="laranja">Arial, Helvetica, sans-serif;</span>
+                    </pre>
+                </code>
+            </section>
+            </p>
+        
+            <p>Algumas definições de Formatação:
+                <ul>
+                    <li><span class="azul">text-decoration:</span><span class="laranja">underline;</span> = Para sublinhado.</li>
+                    <li><span class="azul">text-align:</span><span class="laranja">rigth, center ou left;</span> = para alinhamento do texto.</li>
+                    <li><span class="azul">font-size:</span><span class="laranja">quantidade de pixels;</span> = para definir o tamanho do texto.</li>
+                    <li><span class="azul">font-style:</span><span class="laranja">italic;</span> = Para colocar em itálico.</li>
+                    <li><span class="azul">font-wheight:</span><span class="laranja">ligther, normal, bold ou bolder;</span> = para definir o peso da fonte (negrito). Nem toda fonte permite essa configuração.</li>
+                    <li><span class="azul">text-indent:</span><span class="laranja">quantidade de pixels;</span> = Para definir qual o espaçamento do início do parágrafo.</li>
+                    <li><span class="azul">border-radious:</span><span class="laranja">quantidade de pixels;</span> = Para definir uma sombra para o texto.</li>
+                    <li><span class="azul">box-shadow:</span><span class="laranja">(qtde de pixel, direito) (qtde de pixel, baixo) (qtde de pixel, trasnparência) cor;</span> = Para adicionar uma sombra. </li>
+                    <li><span class="azul">text-transform</span>: <span class="laranja">uppercase;</span> = Transforma todas as letras em maiúsculo.</li>
+                    <li><span class="azul">font-variant:</span> <span class="laranja">small caps;</span> = Para textos maiúsculos, coloca a primeira letra um pouco maior.</li>
+                    <li><span class="azul">line-heigth</span>: <span class="laranja">(medida)</span> = para dar espaço entre as linhas.</li>
+                </ul>
+            </p>
+                <h3>Tamanhos de Fontes</h3>
+                    <p>Medidas Absolutas</p>
+                        <ul>
+                            <li>cm- Centímetros</li>
+                            <li>mm- Milímetros</li>
+                            <li>in- Polegadas</li>
+                            <li><mark>px- Pixel</mark></li>
+                            <li>pt- Ponto</li>
+                        <br> 
+                        </ul>          
+            
+        
+            <p>Medidas Relativas</p>
+                <ul>
+                    <li><mark>em- Relativo ao M, maiúsculo</mark></li>
+                    <li>ex- relativo a altura X</li>
+                    <li>vw- tamanho relativo da largura da tela</li>
+                    <li>vh- tamanho relativo a altura da tela</li>
+                </ul>
+            
+            <p>As medidas que estão destacadas são as que recomendadas para uso.</p>
+        
+        
+            <h2>Formatação de Seletores</h2>
+                <section class="code-html">
+        <code>
+            <pre class="amarelo">body{<br>}
+            </pre>
+        </code>
+        <p><span style="color:aliceblue;">Exemplo de Seletor.</span></p>
+                </section>
+        
+            <ul>
+                <li>Em HTML <span class="laranja">id</span> em CSS é #.</li>
+                <li>Em HTML <span class="laranja">class</span> em CSS é . (ponto).</li>
+                <li>Em CSS : (dois pontos) é uma pseudo classe</li>
+                <li>Em CSS :: (dois pontos repetidos) é um pseudo elemento</li>
+                <li>Em CSS > (símbolo de Maior) é para imdicar o elemento filho.</li>
+                <li>Só pode haver 1 tipo de <span class="laranja">id</span> por página.</li>
+                <li>Para usar duas configurações na mesma classe, separe somente com espaço.</li>
+        <section class="code-html">
+            <code>
+                <pre>
+<span class="azul">&lt;body class</span>:<span class="laranja">"azul ama"</span>&gt;
+                </pre>
+            </code>
+        </section>
+            </ul>
+        
+            <h2>Pseudo Class</h2>
+                <ul>
+                    <li><span class="ama">:hover</span> = Quando passar o mouse por cima do botão, "alguma coisa" irá acontecer.</li>
+                </ul>
+            <section class="code-html">
+                <code>
+                    <pre>
+    <span class="amarelo">.teste-de-botao{</span>
+    <span class="azul">background-color</span>: <span class="laranja">black;</span>
+    <span class="azul">color</span>: <span class="laranja">white;</span>
+    <span class="azul">margin</span>: <span class="laranja">auto;</span>
+    <span class="azul">display</span>: <span class="laranja">block;</span>
+    <span class="azul">width</span>: <span>100px;</span>
+    <span class="azul">height</span>: <span>50px;</span>            
+    <span class="amarelo">
+    }
+        
+    .teste-de-botao:hover{</span>
+    <span class="azul">background-color:</span> <span class="laranja">rgb(248, 248, 141);</span>
+    <span class="azul">color</span> <span class="laranja">rgb(8, 8, 8);</span>
+    <span class="amarelo">}</span>
+                    </pre>
+                </code>
+            </section>
+            <p>O resultado deve ser exibido assim, passe o mouse por cima.</p> 
+               
+                <button class="teste-de-botao">Teste</button><br><br> 
+        
+            <h2>Formatação de links com Pseudo Classes.</h2>
+        
+            <section class="code-html">
+        
+                <code>
+                    <pre>
+        
+<p class="tit-div-2">CSS</p>
+<span class="azul">&lt;style&gt;</span>
+
+<span class="amarelo">a{</span>
+<span class="azul">color</span>: <span class="laranja">red;</span>
+<span class="azul">text-decoration</span>: <span class="laranja">none;</span>
+<span class="azul">font-weight</span>: <span class="laranja">bold</span>;
+<span class="amarelo">}</span>
+
+<span class="verde">/*configuração da tag &lt;a&gt;*/</span>
+
+<span class="amarelo">a:visited{</span>
+
+<span class="azul">color</span>: <span class="laranja">yellow;</span>
+
+<span class="verde">/*Quando o site for visitado*/</span>
+
+<span class="amarelo">}</span>
+
+<span class="amarelo">a:hover{</span>
+<span class="azul">text-decoration</span>: <span class="laranja">underline;</span>
+<span class="azul">color</span>: <span class="laranja">black;</span>
+
+<span class="verde">/*quando colocar o mouse em cima*/</span>
+
+<span class="amarelo">}</span>
+
+<span class="amarelo">a:active{</span>
+<span class="azul">color</span>: <span class="laranja">rgb(15, 243, 83);</span>
+
+<span class="verde">/*essa config é quando voce clica 
+no mouse em cima do link e segura*/</span>
+<span class="amarelo">}</span>
+
+<span class="azul">&lt;/style&gt;</span>
+
+<p class="tit-div-2">HTML</p>
+
+<span class="azul">&lt;ul&gt;</span>
+<span class="azul">&lt;li&gt;&lt;a href</span>=<span class="laranja">"https://www.youtube.com/"</span> 
+<span class="azul">target</span>=<span class="laranja">"_blank"</span> <span class="azul">rel</span>=<span class="laranja">"external"</span>&gt;
+You Tube<span class="azul">&lt;/a>&lt;/li&gt;</span>
+
+<span class="azul">&lt;li&gt;&lt;a href</span>=<span class="laranja">"https://www.facebook.com/"</span> 
+<span class="azul">target</span>=<span class="laranja">"_blank"</span> <span class="azul">rel</span>=<span class="laranja">"external"</span>&gt;
+Facebook<span class="azul">&lt;/a>&lt;/li&gt;</span>
+
+<span class="azul">&lt;li&gt;&lt;a href</span>=<span class="laranja">"https://www.instagram.com/"</span> 
+<span class="azul">target</span>=<span class="laranja">"_blank"</span> <span class="azul">rel</span>=<span class="laranja">"external"</span>&gt;
+Instagram<span class="azul">&lt;/a>&lt;/li&gt;</span>
+<span class="azul">&lt;/ul&gt;</span>
+                    </pre>
+                </code>
+            </section>
+        
+            <p>O resultado será exibido asssim:</p>
+        
+            <section id="links-resultado">
+                <ul>
+                    <li><a class="exemplo" href="https://www.youtube.com/" target="_blank" rel="external">You Tube</a></li>
+                    <li><a class="exemplo" href="https://www.facebook.com/" target="_blank" rel="external">Facebook</a> </li>
+                    <li><a class="exemplo" href="https://www.instagram.com/" target="_blank" rel="external">Instagram</a></li>
+                </ul>
+            </section>   
+        
         </div>
 
-    
+        <!--**********************************
+        Flexbox
+        **************************************-->  
+        <div id="flexbox">
+
+            <h1>Flex-Box</h1>
+                <p>É a forma como são dispostos os itens na página. Ele tem várias propriedades.</p>
+        
+                <p>Para informar ao HTML que iremos usar o flex-box devemos usar a definição:</p>
+        
+                <ul>
+                    <li>display:flex = Para identificar qual a tag vai ser o container de flexbox.</li>
+                </ul>
+        
+            <section class="code-html">
+                <code >
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">display</span>: <span class="laranja">flex;</span>
+<span class="amarelo">}</span>
+                    </pre>
+                </code>
+            </section>
+        
+            <h3>flex-direction:</h3> 
+                <p>Para identificar qual vai ser o eixo principal e perpendicular:</p>
+                    <ul>
+                        <li>Row - alinha todos os elementos na hotizontal</li>
+                    </ul>
+        
+            <section class="code-html">
+                <code >
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-direction</span>: <span class="laranja">row;</span>
+<span class="amarelo">}</span>
+                    </pre>
+                </code>
+            </section>
+        
+            <section>
+                <span class="container1" style="display: flex;flex-direction: row;">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+            </span>
+        
+            <section class="code-html">
+                <code> 
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-direction</span>: <span class="laranja">row-reverse;</span>
+<span class="amarelo">}</span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex;flex-direction: row-reverse;">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+            </span>
+        
+            <ul>
+                <li>
+                Column - alinha os itens na vertical
+                </li>
+            </ul>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-direction</span>: <span class="laranja">column;</span>
+<span class="amarelo">}</span>
+                    </pre>
+                </code>
+        
+            </section>
+                <span class="container1" style="display: flex;flex-direction: column;">
+                    <div class="bloco-1">1</div>
+                    <div class="bloco-2">2</div>
+                    <div class="bloco-3">3</div>
+                </span>
+        
+            <section class="code-html">
+                <code >
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-direction</span>: <span class="laranja">column-reverse;</span>
+<span class="amarelo">}</span>
+                    </pre>
+                </code>
+        
+            </section>        
+                <span class="container1" style="display: flex;flex-direction: column-reverse;">
+                    <div class="bloco-1">1</div>
+                    <div class="bloco-2">2</div>
+                    <div class="bloco-3">3</div>
+                </span>
+            </section>
+        
+            <h3>justify-content</h3>
+                <p>flex-start = para alinhar os itens no eixo principal.</p>
+        
+                <section class="code-html">
+                    <code>
+                        <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">justify-content</span>: <span class="laranja">flex-start;</span>
+<span class="amarelo">}</span>
+<span class="verde">
+/*para alinhar os itens da
+esquerda para a direita*/"</span>
+                        </pre>
+                    </code>
+                </section>
+        
+                <span class="container1" style="display: flex;justify-content: flex-start; background-color: rgba(175, 79, 100, 0.404); width: 97vw;">
+                    <div class="bloco-1">1</div>
+                    <div class="bloco-2">2</div>
+                    <div class="bloco-3">3</div>
+                </span>
+        
+            <p>flex-end = para alinhar os itens no eixo principal de forma reversa</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">justify-content</span>: <span class="laranja">flex-end;</span>
+<span class="amarelo">}</span>
+<span class="verde">
+/*para alinhar os itens da
+direita para a esquerda*/</span>    
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex;justify-content: flex-end; background-color:  rgba(175, 79, 100, 0.404); width: 97vw;">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+            </span>
+        
+            <p>center = para alinhar os itens ao centro</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">justify-content</span>: <span class="laranja">center;</span>
+<span class="amarelo">}</span>
+<span class="verde">
+/*para alinhar os itens 
+ao centro*/</span> 
+                    </pre>
+                </code>
+            </section>
+        
+                <span class="container1" style="display: flex;justify-content: center; background-color:  rgba(175, 79, 100, 0.404); width: 97vw;">
+                    <div class="bloco-1">1</div>
+                    <div class="bloco-2">2</div>
+                    <div class="bloco-3">3</div>
+                </span>
+        
+            <p>space-between - para colocar um espaço entre os itens do meio</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">justify-content</span>: <span class="laranja">space-between;</span>
+<span class="amarelo">}</span>
+<span class="verde">
+/*para colocar espaco entre 
+os itens do meio*/</span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex;justify-content: space-between; background-color:  rgba(175, 79, 100, 0.404); width: 97vw;">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+            </span>
+        
+            <p>space-around = para colocar um espaço entre todos os itens</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">justify-content</span>: <span class="laranja">space-sround;</span>
+<span class="amarelo">}</span>
+<span class="verde">
+/*para colocar espaco entre 
+todos os itens*/</span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex;justify-content: space-around; background-color: rgba(175, 79, 100, 0.404); width: 97vw;">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+            </span>
+        
+            <h3>align-itens</h3>
+                <p>Para alinhar os itens no eixo perpendicular</p>
+        
+                <p>flex-start = alinha os itens no início da box</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">align-itens</span>: <span class="laranja">flex-start;</span>
+<span class="amarelo">}</span>
+<span class="verde"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; align-items: flex-start; background-color:  rgba(175, 79, 100, 0.404); width: 97vw; height:200px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+            </span>
+                <p>flex-end = alinha os itens na base da página</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">align-itens</span>: <span class="laranja">flex-end;</span>
+<span class="amarelo">}</span>
+<span class="verde"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; align-items: flex-end; background-color: rgba(175, 79, 100, 0.404); width: 97vw; height:200px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+            </span>
+        
+                <p>center = alinha itens ao centro</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">align-itens</span>: <span class="laranja">center;</span>
+<span class="amarelo">}</span>
+<span class="verde"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; align-items: center; background-color:  rgba(175, 79, 100, 0.404); width: 97vw; height:200px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+            </span>
+        
+            <p>baseline - alinha a base das fontes</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">align-itens</span>: <span class="laranja">baseline;</span>
+<span class="amarelo">}</span>
+<span class="verde"></span>
+                    </pre>  
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; align-items: baseline; background-color: rgba(175, 79, 100, 0.404); width: 97vw; height:200px">
+                <div class="bloco-1" style="font-size: 2em;">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3" style="font-size: 3em;">3</div>
+            </span>
+        
+            <h3>Flex-wrap</h3>
+        
+            <p>Quebra de linha de elementos, por padrão ele vem com <span class="ame">flex-wrap: nowrap;</span></p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">nowrap;</span>
+<span class="amarelo">}</span>
+<span class="verde"></span>
+                    </pre>
+                </code>
+            </section>
+        
+        
+            <span class="container1" style="display: flex; align-items: center; background-color:  rgba(175, 79, 100, 0.404); width: 97vw; height:200px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+               
+            </span>
+        
+            <p> wrap: quebra de linha</p>
+        
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>
+<span class="amarelo">}</span>
+<span class="verde"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; align-items: center; flex-wrap: wrap; background-color:  rgba(175, 79, 100, 0.404); width: 97vw; height:200px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+               
+            </span>
+        
+            <p>wrap-reverse: quebra de linha para cima.</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">wrap-reverse;</span>
+<span class="amarelo">}</span>
+<span class="verde"></span>
+                    </pre>
+                </code>
+            </section>
+        
+        
+            <span class="container1" style="display: flex; align-items: center; flex-wrap: wrap-reverse; background-color:  rgba(175, 79, 100, 0.404); width: 97vw; height:400px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+                <div class="bloco-2">11</div>
+                <div class="bloco-3">12</div>
+                <div class="bloco-1">13</div>
+                <div class="bloco-2">14</div>
+                <div class="bloco-3">15</div>
+                <div class="bloco-1">16</div>
+                <div class="bloco-2">17</div>
+                <div class="bloco-3">18</div>
+            </span>
+        
+        
+            <h3>align-content</h3>
+        
+                <p>alinhamento de itens na vertical</p>
+        
+                <p>flex-start</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+<span class="azul">align-content</span>: <span class="laranja">flex-start;</span>
+<span class="amarelo">}</span>
+<span class="verde"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; align-content: flex-start; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 97vw; height:300px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+                <div class="bloco-2">11</div>
+                <div class="bloco-3">12</div>
+                <div class="bloco-1">13</div>
+                <div class="bloco-2">14</div>
+                <div class="bloco-3">15</div>
+                <div class="bloco-1">16</div>
+                <div class="bloco-2">17</div>
+                <div class="bloco-3">18</div>
+            </span>
+        
+            <p>flex-end</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+<span class="azul">align-content</span>: <span class="laranja">flex-end;</span>
+<span class="amarelo">}</span>
+<span class="lim"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; align-content: flex-end; flex-wrap: wrap; background-color:
+             rgba(175, 79, 100, 0.404); width: 97vw; height:300px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+                <div class="bloco-2">11</div>
+                <div class="bloco-3">12</div>
+                <div class="bloco-1">13</div>
+                <div class="bloco-2">14</div>
+                <div class="bloco-3">15</div>
+                <div class="bloco-1">16</div>
+                <div class="bloco-2">17</div>
+                <div class="bloco-3">18</div>
+            </span>
+        
+            <p>center</p>
+        
+            <section class="code-html">
+                <code>  
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+<span class="azul">align-content</span>: <span class="laranja">center;</span>
+<span class="amarelo">}</span>
+<span class="lim"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; align-content: center; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 97vw; height:300px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+                <div class="bloco-2">11</div>
+                <div class="bloco-3">12</div>
+                <div class="bloco-1">13</div>
+                <div class="bloco-2">14</div>
+                <div class="bloco-3">15</div>
+                <div class="bloco-1">16</div>
+                <div class="bloco-2">17</div>
+                <div class="bloco-3">18</div>
+            </span>
+        
+            <p>space-between</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+<span class="azul">align-content</span>: <span class="laranja">space-between;</span>
+<span class="amarelo">}</span>
+<span class="lim"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; align-content: space-between; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 97vw; height:300px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+                <div class="bloco-2">11</div>
+                <div class="bloco-3">12</div>
+                <div class="bloco-1">13</div>
+                <div class="bloco-2">14</div>
+                <div class="bloco-3">15</div>
+                <div class="bloco-1">16</div>
+                <div class="bloco-2">17</div>
+                <div class="bloco-3">18</div>
+            </span>
+        
+            <p>space-around</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+<span class="azul">align-content</span>: <span class="laranja">space-sround;</span>
+<span class="amarelo">}</span>
+<span class="lim"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; align-content: space-around; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 97vw; height:300px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+                <div class="bloco-2">11</div>
+                <div class="bloco-3">12</div>
+                <div class="bloco-1">13</div>
+                <div class="bloco-2">14</div>
+                <div class="bloco-3">15</div>
+                <div class="bloco-1">16</div>
+                <div class="bloco-2">17</div>
+                <div class="bloco-3">18</div>
+            </span>
+        
+            <h3>Gap, row-gap (distância entre linhas) e column-gap (distância entre colunas)</h3>
+        
+            <p>Espaço entre os elementos</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+<span class="azul">gap</span>: <span class="laranja">30px;</span>
+<span class="amarelo">}</span>
+<span class="lim"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; gap: 30px;  flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 97vwx; height: 500px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+                <div class="bloco-2">11</div>
+                <div class="bloco-3">12</div>
+                <div class="bloco-1">13</div>
+                <div class="bloco-2">14</div>
+                <div class="bloco-3">15</div>
+                <div class="bloco-1">16</div>
+                <div class="bloco-2">17</div>
+                <div class="bloco-3">18</div>
+            </span>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+<span class="azul">gap</span>: <span class="laranja">70px;</span>
+<span class="amarelo">}</span>
+<span class="lim"></span>
+                    </pre>
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; gap: 70px;  flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 97vw; height:900px">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+                <div class="bloco-2">11</div>
+                <div class="bloco-3">12</div>
+                <div class="bloco-1">13</div>
+                <div class="bloco-2">14</div>
+                <div class="bloco-3">15</div>
+                <div class="bloco-1">16</div>
+                <div class="bloco-2">17</div>
+                <div class="bloco-3">18</div>
+            </span>
+        
+            <p>Podemos definir dois valores para o gap, ordem linha e depois colunas.</p>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+<span class="amarelo">.container{</span>
+<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+<span class="azul">gap</span>: <span class="laranja">10px 30px;</span>
+<span class="amarelo">}</span>
+<span class="lim"></span>
+                    </pre>  
+                </code>
+            </section>
+        
+            <span class="container1" style="display: flex; gap: 10px 20px;  flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 97vw;">
+                <div class="bloco-1">1</div>
+                <div class="bloco-2">2</div>
+                <div class="bloco-3">3</div>
+                <div class="bloco-1">4</div>
+                <div class="bloco-2">5</div>
+                <div class="bloco-3">6</div>
+                <div class="bloco-1">7</div>
+                <div class="bloco-2">8</div>
+                <div class="bloco-3">9</div>
+                <div class="bloco-1">10</div>
+            </span>
+            </section>
+        </div>
+
+        <!--**********************************
+        Formulários
+        **************************************-->  
+        <div id="formularios">
+            <!--Formulários-->
+        
+            <h1>Formulários</h1>
+        
+            <p>A tag para formulários é a tag <span class="azul">&lt;form&gt;</span></p>
+            <ul>
+                <li>Input: é para o botão;</li>
+                <li>Label: é para o que está escrito</li>
+                <li>Para criar o botão de enviar use:
+                    <section class="code-html">
+                        <code>
+                            <pre>
+&lt;<span class="azul">input type</span>=<span class="laranja">"submit"</span> <span class="azul">value</span>=<span class="laranja">"<abbr title="texto que será exibido no botão">Enviar</abbr>"</span>&gt;
+<input type="submit" value="Enviar"></abbr>
+                            </pre>
+                        </code>
+                    </section>
+                </li>
+                <li>Para criar um botão para limpar o formulário:
+                    <section class="code-html">
+                        <code>
+                            <pre>
+&lt;<span class="azul">input type</span>=<span class="laranja">"reset"</span> <span class="azul">value</span>=<span class="laranja">"Limpar"</span>&gt;
+<input type="reset" value="Limpar">
+                            </pre>
+                        </code>
+                    </section>
+        
+                </li>
+            </ul>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+&lt;<span class="azul"><abbr title="Define uma área ao redor do formuário">fieldset</abbr></span>&gt;
+
+    &lt;<span class="azul"><abbr title="Define um nome para o field.">legend</abbr></span>&gt;Informações de contato&lt;
+    <span class="azul">/legend</span>&gt;
+
+    &lt;<span class="azul">form</span>&gt;
+        &lt;<span class="azul">label for</span>=<span class="laranja">"name"</span>&gt; Nome:&lt;<span class="azul">/label</span>&gt;
+
+        &lt;<span class="azul">input type</span>=<span class="laranja">"<abbr title="Tipo de input para o formulário">text</abbr>"</span> <span class="azul">id</span>=<span class="laranja">"name"</span> 
+        <span class="azul">name</span>=<span class="laranja">"name"</span>>&lt;br&gt;
+
+        &lt;<span class="azul">label for</span>=<span class="laranja">"email"</span>&gt; Email:
+        &lt;<span class="azul">/label</span>&gt;
+
+        &lt;<span class="azul">input type</span>=<span class="laranja">"email"</span> 
+        <span class="azul">id</span>=<span class="laranja">"email"</span> <span class="azul">email</span>=<span class="laranja">"email"</span>>&lt;br&gt;   
+
+        &lt;<span class="azul">textarea name</span>=<span class="laranja">"comentarios"</span> 
+        <span class="azul">id</span>=<span class="ama">"comentarios"</span> <span class="azul"><abbr title="Quantidade de linhas">rows</abbr></span>="4" <span class="azul"><abbr title="Quantidade de colunas"> 
+        cols</abbr></span>="50" <span class="azul">
+
+        <abbr title="Texto alternativo que aparece na caixa de diálogo.">placeholder</abbr></span>=<span class="ama">"Digite aqui seus 
+        comentários...."</span>&gt;
+        &lt;<span class="azul">/textarea</span>&gt; &lt;<span class="azul">br</span>&gt;
+
+        &lt;<span class="azul">button</span> <span style="color:blueviolet"><abbr title="Código em JavaScript">onclick="alert
+        ('Feedback Enviado')"</abbr></span>&gt;Envie seu 
+        Feedback&lt;<span class="azul">/button</span>&gt;  
+
+    &lt;<span class="azul">/form</span>&gt;
+
+&lt;<span class="azul">/fieldset</span>&gt;
+                    </pre>
+                </code>
+            </section>
+        <p>O resultado que deve ser exibido assim:</p>
+        
+            <fieldset class="formulario-1">
+            <legend>Informações de contato</legend>
+                <form>
+                    <label for="name"> Nome:</label>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="email"> Email:</label>
+                    <input type="email" id="email" name="email"> <br>
+                    <label for="comentarios">Comentários:</label> <br>
+                    <textarea name="comentarios" id="comentarios" rows="4" cols="45" placeholder="Digite aqui seus comentários...."></textarea> <br>
+                    <button onclick="alert('Feedback Enviado')">Envie seu Feedback</button>             
+                </form>
+            </fieldset>            			
+        <br>
+        
+            <section class="code-html">
+                <h3><span style="font-weight: bold; color: rgb(228, 228, 236); font-size: 2rem;">INPUT TYPES</span> (tipos de input) no HTML</h3>
+                    <ul>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"text"</span>&gt; <input type="text" placeholder="Seu texto aqui"></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"password"</span>&gt;
+                        <input type="password" placeholder="Digite sua senha aqui"></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"<abbr title="Para esse type, quando quiser marcar somente uma caixa colcoa todos com o mesmo name.">radio</abbr>"</span>&gt; <input type="radio"><input type="radio"><input type="radio"></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"number"</span>&gt; <input type="number" placeholder="digite um número"></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"image"</span>&gt; <input type="image"></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"checkbox"</span>&gt; <input type="checkbox"></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"button"</span>&gt; <input style="height: 20px; width: 80px;" type="button" value="clique aqui"> <label for="button">clique aqui</label></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"<abbr title="Para definir a cor inicial, coloca value e a cor em hexadecimal">color</abbr>"</span>&gt; <input type="color"></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"email"</span>&gt; <input type="email"></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"<abbr title="para este método só pode usar o método POST">file</abbr>"</span>&gt; <input type="file"></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"hidden"</span>&gt; <input type="hidden"> <label for="hidden"> clique aqui</label></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"month"</span>&gt;<input type="month"></label></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"date"</span>&gt;<input type="date"></label></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"time"</span>&gt;<input type="time"></label></li>
+                        <li>&lt;<span class="azul">input type</span> =<span class="ama">"<abbr title="use Min e Max para definir o alcance do range. E value para definir onde a bolinha começa">range</abbr>"</span>&gt;<input type="range"></label></li>
+                    </ul>
+            </section>
+        
+            <p>Existem 2 métodos de envio:</p>
+            <ul>
+                <li><span class="ama">GET</span>: Para dados não sensíveis, tipo nome, idade, peso, e etc.</li>
+                <li><span class="ama">POST</span>: para dados sensíveis, tipo senha, número de cartão de crédito entre outros.</li>
+            </ul>
+        
+            <section class="code-html">
+                <code>
+                    <pre>
+&lt;<span class="azul">form <abbr title="script para enviar o formulário">action</abbr></span>=<span class="laranja">"formulário para envio"</span> 
+<span class="azul"><abbr title="Para definir o método de envio">method</abbr></span>=<span class="laranja">"post ou get"</span> <span class="azul">
+<abbr title="para autocompletar o formulário">autocomplete</abbr></span>=<span class="laranja">"on ou off"</span>&gt;
+                    </pre>
+                </code>
+            </section>
+        
+            <h2>Atributos</h2>
+            <ul>
+                <li><span class="ama">required</span>: Para ser obrigatório colocar algum dado.</li>
+                <li><span class="ama">minlength <span style="color: black;">ou</span> maxlength</span>: Para definir o mínimo ou o máximo de caracteres.</li>
+                <li><span class="ama">size="número de caracteres"</span>: Para definir a quantidade de caracteres que serão exibidos na tela.</li>
+                <li><span class="ama">placeholder="descrição"</span>Para exibir uma descrição na caixa.</li>
+                <li><span class="ama">Min <span style="color: black;">ou</span> Max</span>: é para caixas com atributos numéricos</li>
+                <li><span class="ama">Step="derfina uma numeração"</span>: é para definir o intervalo de números. ex: <strong><span class="azul">step</span>=<span class="ama">"0.1"</span></strong></li>
+            </ul>       
+        </div>
     
 
 
