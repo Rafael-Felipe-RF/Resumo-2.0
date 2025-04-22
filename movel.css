@@ -29,7 +29,9 @@
     *************************************/
     body{
         background-color: rgba(211, 216, 198, 0.336);
+        background: url(Imagens/fundo.png) transparent;
     }
+
 
     /***********************************
     Estilização do cabeçalho
@@ -243,8 +245,15 @@
         margin: 10px;
     }
        
-    
-
+    /***********************************
+    Estilização do Botão de atalho
+    *************************************/
+    .but-tec{
+        background-color: black;
+        color: white;
+        padding: 4px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.349);
+    }
  
 
 
