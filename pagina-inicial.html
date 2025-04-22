@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumo 2.0</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="movel.css">
 </head>
 <body>
@@ -11,16 +12,22 @@
         <!--*****************************
         Cabeçalho da página
         *********************************-->
+
+        <!--Cabeçalho para telas com tamanho menor que 999px-->
         <div id="topo" class="cabecalho">
-            <ul>
-                <li><a href="#HTML">HTML</a></li>
-                <li><a href="#Links">Links</a></li>
-                <li><a href="#img">Imagens e Vídeos</a></li>
-                <li><a href="#tabelas">Tabelas</a></li>
-                <li><a href="#css">CSS's</a></li>
-                <li><a href="#flexbox">Flex-Box</a></li>
-                <li><a href="#formularios">Formulários</a></li>
-            </ul>
+            <details>
+                <summary class="esconder-seta"> 
+                    <i id="icone" class="bi bi-list"></i></summary>
+                <ul>
+                    <li><a href="#HTML">HTML</a></li>
+                    <li><a href="#Links">Links</a></li>
+                    <li><a href="#img">Imagens e Vídeos</a></li>
+                    <li><a href="#tabelas">Tabelas</a></li>
+                    <li><a href="#css">CSS's</a></li>
+                    <li><a href="#flexbox">Flex-Box</a></li>
+                    <li><a href="#formularios">Formulários</a></li>
+                </ul>
+            </details>
         </div>
     </header>
 

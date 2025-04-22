@@ -39,7 +39,7 @@
     .cabecalho{
         padding: 10px;
         background-color: var(--cor03);
-        columns: 2;
+    
     }
 
     .cabecalho ul li{
@@ -60,6 +60,17 @@
     .cabecalho ul li a:hover{
         background-color: rgba(255, 255, 255, 0.384);
         border-radius: 15px;
+    }
+
+    #icone{
+        color: white;
+        font-size: 50px;
+    }
+
+    summary{
+        list-style: none;
+        text-align: center;
+       
     }
 
     /***********************************
@@ -146,7 +157,7 @@
     }
 
     h1{
-        background-color: rgba(0, 204, 255, 0.11);
+        background-color: rgba(99, 222, 238, 0.705);
         margin: 15px;
         text-align: center;
         border-radius: 15px;
