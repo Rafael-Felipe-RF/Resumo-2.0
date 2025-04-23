@@ -1,0 +1,324 @@
+@charset "utf8";
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Passion+One:wght@400;700;900&family=Playpen+Sans:wght@100..800&family=Playwrite+VN:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sriracha&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor01: #52E379;
+    --cor02: #52E3DC;
+    --cor03: #52E3AB;
+    --cor04: #52BCE3;
+    --vermelho: red;
+    --amarelo: rgb(231, 202, 69);
+    --azul: rgb(97, 132, 177);
+    --laranja: rgba(199, 90, 39, 0.925);
+    --cinza: rgb(88, 84, 84);
+    --verde: rgb(84, 179, 47);
+    --rosa: rgb(241, 117, 225);
+}
+
+@media screen and (min-width: 999px){
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .esconder-seta{
+        display: none
+    }
+
+
+    /**********************************
+    Configuração do menu lateral
+    *********************************/
+    .cabecalho-2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: var(--cor01);
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: "Oswald", serif;
+    }
+
+    .cabecalho-2 ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cabecalho-2 li {
+        margin-bottom: 20px;
+    }
+
+    .cabecalho-2 a {
+        color: #f7f6f6;
+        text-decoration: none;
+    }
+
+    .cabecalho-2 a:hover{
+        text-decoration: underline;
+    }
+
+    .conteudo {
+        margin-left: 200px;
+        padding: 20px;
+    }
+
+    .conteudo div {
+        display: none;
+    }
+
+    .conteudo div:target {
+        display: block;
+    }
+
+    #links-resultado{
+        background-color: #090a0859;
+        width: 200px;
+        margin: 2px;
+        padding: 1px;
+    }
+
+    .container div{
+        display: block;
+        display: flex; 
+    }
+
+    /***************************************
+    Configuração dos elementos do corpo da página
+    ***************************************/
+    header{
+        background-color: var(--cor01);
+        width: 100%;
+        margin-top: -30px;
+        margin-left: -30px;
+        margin-right: -50px;
+        text-align: center;
+        
+    }
+
+    body{
+        font-family: 'Roboto', sans-serif;   
+        font-size: 1rem;
+        line-height: 1.2;
+        padding: 0.7rem;
+        background-image: linear-gradient(to right, #d1b29949, transparent);
+    }
+
+
+    p, h1, h2, h3{
+        padding: 15px;
+    }
+
+    main ul{
+        padding-left: 25px;
+        line-height: 25px;
+    }
+
+    h1{
+        background-color: rgba(99, 222, 238, 0.705);
+        margin: 15px;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.219);
+    }
+
+    ul{
+        margin: 1rem;
+        list-style-position: inside;
+    }
+
+    li{
+        margin: 2px;
+        padding: 0.1rem;
+    }
+
+    p{
+        padding: 0.3rem;
+        margin: 1rem;
+    }
+
+    /***********************************
+    Estilização do Código HTML
+    *************************************/
+
+    code, pre{
+        width: 600px;
+        contain: layout;
+        font-weight: bold;
+        color: white;
+        padding: 10px;
+    }
+
+    .code-html{
+        background-color: var(--cinza);
+        width: 600px;
+        display: block;
+        margin: 15px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.253);
+    }
+
+    .azul{
+        color: var(--azul);
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.116);
+    }
+
+    .laranja{
+        color: var(--laranja);
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.116);
+    }
+
+    .verde{
+        color: var(--verde);
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.116);
+    }
+
+    .amarelo{
+        color: var(--amarelo);
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.116);
+    }
+
+    .rosa{
+        color: var(--rosa);
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.116);
+    }
+
+    /*****************************
+    Estilização dos botões
+    ******************************/
+    .but-tec{
+        background-color: black;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .botao-azul{
+        background-color: #1B66C9;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 12px;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .botao-azul:hover {
+        background-color: #87CEEB;
+    }
+
+    .seletor{
+        background-color: var(--cor1);
+        width: 150px;
+        align-items: center;
+        padding: 8px;
+        color: white;
+        margin: auto;
+    }
+
+    .teste-de-botao{
+        background-color: black;
+        color: white;
+        margin: auto;
+        width: 100px;
+        height: 50px;
+    }
+
+    .teste-de-botao:hover{
+        background-color: rgb(248, 248, 141);
+        color: rgb(8, 8, 8);
+    }
+
+    .exemplo{
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .exemplo:visited{
+        color: yellow;
+        /*Quando o site for visitado*/
+    }
+
+    .exemplo:hover{
+        text-decoration: underline;
+        color: black;
+        /*quando colocar o mouse em cima*/
+    }
+
+    .exemplo:active{
+        color: rgb(15, 243, 83);
+        /*essa config é quando voce clica no mouse em cima do link e segura*/
+    }
+
+    
+    /*******************************
+    Estilização de elementos do FlexBox
+    ***********************************/
+    .caixas{
+        color: black;
+    }
+
+    .bloco-1{
+        border: 1px solid rgb(0, 0, 0);
+        width: 50px;
+        height: 50px;
+        padding: 2px;
+        text-align: center;
+        background-color: #D9C3B8;
+        margin: 3px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.678);
+    }
+
+    .bloco-2{
+        border: 1px solid rgb(0, 0, 0);
+        width: 50px;
+        height: 50px;
+        padding: 2px;
+        text-align: center;
+        background-color: #B6B8D9;
+        margin: 3px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.678);
+    }
+
+    .bloco-3{
+        border: 1px solid rgb(0, 0, 0);
+        width: 50px;
+        height: 50px;
+        padding: 2px;
+        text-align: center;
+        background-color: #C2D9B8;
+        margin: 3px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.678);
+    }
+
+    .container1 div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container1{
+        margin: 10px;
+        padding: 100px;
+    }
+
+    #flexbox > h3{
+        background-color: #a2aabb;
+        padding: 3px;
+        width: 25rem;
+            
+    }
+
+}
