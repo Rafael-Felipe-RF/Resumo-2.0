@@ -28,6 +28,8 @@
     body{
         background-color: rgba(211, 216, 198, 0.336);
         background: url(Imagens/fundo.png) transparent;
+        background-attachment: fixed;
+
     }
 
 
