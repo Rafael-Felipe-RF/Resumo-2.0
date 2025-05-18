@@ -903,13 +903,10 @@ Instagram<span class="azul">&lt;/a>&lt;/li&gt;</span>
             **************************************-->
             <div id="flexbox">
                 <h1>Flex-Box</h1>
-                    <p>É a forma como são dispostos os itens na página. Ele tem várias propriedades.</p>
+                    <p>É a forma como são dispostos os itens na página. </p>
             
-                    <p>Para informar ao HTML que iremos usar o flex-box devemos usar a definição:</p>
-            
-                    <ul>
-                        <li>display:flex = Para identificar qual a tag vai ser o container de flexbox.</li>
-                    </ul>
+                    <p>Para informar ao HTML que iremos usar o flex-box devemos usar a definição, <span class="azul">display</span>:<span class="laranja">flex;</span>, na maioria das vezes esse display só será usado no elemento pai, no Elemento filho se usa a definição, <span class="azul">flex</span>:<span class="laranja">auto;</span>.</p>           
+                
             
                 <section class="code-html">
                     <code >
@@ -920,640 +917,640 @@ Instagram<span class="azul">&lt;/a>&lt;/li&gt;</span>
                         </pre>
                     </code>
                 </section>
-            
-                <h3>flex-direction:</h3>
-                    <p>Para identificar qual vai ser o eixo principal e perpendicular:</p>
+
+                <h3 class="tit-flex">Eixos</h3>
+
+                <p>Para definir o alinhamento dos itens temos que definir qual será o eixo principal <i>(main-axis)</i> Vertical,  e o eixo transversal <i>(cross-axis)</i> Horizontal, do <i>container</i>.</p>
+
+                <picture>
+                    <img class="imagem-flex" src="Imagens/Eixos.png" alt="">
+                </picture>
+
+                <h2>Direções</h2>
+
+                <h3 class="tit-flex">flex-direction</h3>
+
+                <picture">
+                    <img class="imagem-flex" src="Imagens/imagens-celular/flex-direction.png" alt="">
+                </picture>
+
+                    <p>
                         <ul>
-                            <li>Row - alinha todos os elementos na hotizontal</li>
+                            <li><span class="laranja">row</span>: alinha os itens da esquerda para a direita;</li>
+                            <li><span class="laranja">row-reverse</span>: alinha os itens da direita para a esquerda;</li>
+                            <li><span class="laranja">column</span>: alinha em coluna de cima para baixo;</li>
+                            <li><span class="laranja">column-reverse</span>: alinha em coluna de baixo para cima;</li>
                         </ul>
+                    </p>
+
+                <h3 class="tit-flex">flex-wrap (quebra de linha)</h3>
+
+                <picture>
+                    <img class="imagem-flex" src="Imagens/imagens-celular/flex-wrap.png" alt="">
+                </picture>
+
+                    <p>
+                        <ul style="margin: 5px;">
+                            <li><span class="laranja">no-wrap</span>: é o padrão;</li>
+                            <li><span class="laranja">wrap</span>: quebra o conteúdo para a linha abaixo;</li>
+                            <li><span class="laranja">wrap-reverse</span>: quebra a linha e manda o último item para cima;</li>
+                        </ul>
+                    </p>
+
+                <div class="flex-div">
+
+                    <p class="flex-p"><span class="azul">flex-flow</span>:<span class="laranja"> (flex-direction) + (flex-wrap);</span></p>
+
+                </div>
+
+                <h3 class="tit-flex">justify-content</h3>
+
+                <picture>
+                    <img class="imagem-flex" src="Imagens/imagens-celular/justify-content.png" alt="">
+                </picture>
+
+                    <p>
+                        Este alinhamento é feito no eixo-principal (main-axis).
+                        <ul>
+                            <li><span class="laranja">flex-start</span>: inicia o conteúdo no main-start</li>
+                            <li><span class="laranja">flex-end</span>: inicia o conteúdo no main-end</li>
+                            <li><span class="laranja">space-between</span>: ele cola o primeiro no main-start o último item no main-end e distribui o restante dos itenso no espaço do meio;</li>
+                            <li><span class="laranja">space-evenly</span>: divide os itens e deixa sempre o mesmo espaço entre os itens;</li>
+                            <li><span class="laranja">space-around</span>: ele divide o espaço total do container pelo numero de itens, e coloca o item centralizado nesse espaço;</li>
+                    </p>
+
+                <h3 class="tit-flex">align-itens</h3>
+
+                <picture>
+                    <img class="imagem-flex" src="Imagens/imagens-celular/align-itens.png" alt="">
+                </picture>
+
+                <p>align-itens: alinha os itens no eixo transversal (cross-axis);</p>
+
+
+
+                
             
-                <section class="code-html">
-                    <code >
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-direction</span>: <span class="laranja">row;</span>
-<span class="amarelo">}</span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <section>
-                    <span class="container1" style="display: flex;flex-direction: row;">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                </span>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-direction</span>: <span class="laranja">row-reverse;</span>
-<span class="amarelo">}</span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex;flex-direction: row-reverse;">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                </span>
-            
-                <ul>
-                    <li>
-                    Column - alinha os itens na vertical
-                    </li>
-                </ul>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-direction</span>: <span class="laranja">column;</span>
-<span class="amarelo">}</span>
-                        </pre>
-                    </code>
-            
-                </section>
-                    <span class="container1" style="display: flex;flex-direction: column;">
-                        <div class="bloco-1">1</div>
-                        <div class="bloco-2">2</div>
-                        <div class="bloco-3">3</div>
-                    </span>
-            
-                <section class="code-html">
-                    <code >
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-direction</span>: <span class="laranja">column-reverse;</span>
-<span class="amarelo">}</span>
-                        </pre>
-                    </code>
-            
-                </section>
-                    <span class="container1" style="display: flex;flex-direction: column-reverse;">
-                        <div class="bloco-1">1</div>
-                        <div class="bloco-2">2</div>
-                        <div class="bloco-3">3</div>
-                    </span>
-                </section>
-            
-                <h3>justify-content</h3>
-                    <p>flex-start = para alinhar os itens no eixo principal.</p>
-            
+                <span>
+                    <!--**************************************************************************************
+                    Esta Seção está obsoleta no código
+                    
+                    <h3>flex-direction:</h3>
+                    
+                            <ul>
+                                <li>Row - alinha todos os elementos na hotizontal</li>
+                            </ul>
                     <section class="code-html">
-                        <code>
+                        <code >
                             <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">justify-content</span>: <span class="laranja">flex-start;</span>
-<span class="amarelo">}</span>
-<span class="verde">
-/*para alinhar os itens da
-esquerda para a direita*/"</span>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-direction</span>: <span class="laranja">row;</span>
+                    <span class="amarelo">}</span>
                             </pre>
                         </code>
                     </section>
-            
-                    <span class="container1" style="display: flex;justify-content: flex-start; background-color: rgba(175, 79, 100, 0.404); width: 85vw;">
+                    <section>
+                        <span class="container1" style="display: flex;flex-direction: row;">
                         <div class="bloco-1">1</div>
                         <div class="bloco-2">2</div>
                         <div class="bloco-3">3</div>
                     </span>
-            
-                <p>flex-end = para alinhar os itens no eixo principal de forma reversa</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">justify-content</span>: <span class="laranja">flex-end;</span>
-<span class="amarelo">}</span>
-<span class="verde">
-/*para alinhar os itens da
-direita para a esquerda*/</span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex;justify-content: flex-end; background-color:  rgba(175, 79, 100, 0.404); width: 85vw;">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                </span>
-            
-                <p>center = para alinhar os itens ao centro</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">justify-content</span>: <span class="laranja">center;</span>
-<span class="amarelo">}</span>
-<span class="verde">
-/*para alinhar os itens 
-ao centro*/</span>
-                        </pre>
-                    </code>
-                </section>
-            
-                    <span class="container1" style="display: flex;justify-content: center; background-color:  rgba(175, 79, 100, 0.404); width: 85vw;">
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-direction</span>: <span class="laranja">row-reverse;</span>
+                    <span class="amarelo">}</span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex;flex-direction: row-reverse;">
                         <div class="bloco-1">1</div>
                         <div class="bloco-2">2</div>
                         <div class="bloco-3">3</div>
                     </span>
-            
-                <p>space-between - para colocar um espaço entre os itens do meio</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">justify-content</span>: <span class="laranja">space-between;</span>
-<span class="amarelo">}</span>
-<span class="verde">
-/*para colocar espaco entre 
-os itens do meio*/</span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex;justify-content: space-between; background-color:  rgba(175, 79, 100, 0.404); width: 85vw;">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
+                    <ul>
+                        <li>
+                        Column - alinha os itens na vertical
+                        </li>
+                    </ul>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-direction</span>: <span class="laranja">column;</span>
+                    <span class="amarelo">}</span>
+                            </pre>
+                        </code>
+                    </section>
+                        <span class="container1" style="display: flex;flex-direction: column;">
+                            <div class="bloco-1">1</div>
+                            <div class="bloco-2">2</div>
+                            <div class="bloco-3">3</div>
+                        </span>
+                    <section class="code-html">
+                        <code >
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-direction</span>: <span class="laranja">column-reverse;</span>
+                    <span class="amarelo">}</span>
+                            </pre>
+                        </code>
+                    </section>
+                        <span class="container1" style="display: flex;flex-direction: column-reverse;">
+                            <div class="bloco-1">1</div>
+                            <div class="bloco-2">2</div>
+                            <div class="bloco-3">3</div>
+                        </span>
+                    </section>
+                    <h3>justify-content</h3>
+                        <p>flex-start = para alinhar os itens no eixo principal.</p>
+                        <section class="code-html">
+                            <code>
+                                <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">justify-content</span>: <span class="laranja">flex-start;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde">
+                    /*para alinhar os itens da
+                    esquerda para a direita*/"</span>
+                                </pre>
+                            </code>
+                        </section>
+                        <span class="container1" style="display: flex;justify-content: flex-start; background-color: rgba(175, 79, 100, 0.404); width: 85vw;">
+                            <div class="bloco-1">1</div>
+                            <div class="bloco-2">2</div>
+                            <div class="bloco-3">3</div>
+                        </span>
+                    <p>flex-end = para alinhar os itens no eixo principal de forma reversa</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">justify-content</span>: <span class="laranja">flex-end;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde">
+                    /*para alinhar os itens da
+                    direita para a esquerda*/</span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex;justify-content: flex-end; background-color:  rgba(175, 79, 100, 0.404); width: 85vw;">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                    </span>
+                    <p>center = para alinhar os itens ao centro</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">justify-content</span>: <span class="laranja">center;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde">
+                    /*para alinhar os itens 
+                    ao centro*/</span>
+                            </pre>
+                        </code>
+                    </section>
+                        <span class="container1" style="display: flex;justify-content: center; background-color:  rgba(175, 79, 100, 0.404); width: 85vw;">
+                            <div class="bloco-1">1</div>
+                            <div class="bloco-2">2</div>
+                            <div class="bloco-3">3</div>
+                        </span>
+                    <p>space-between - para colocar um espaço entre os itens do meio</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">justify-content</span>: <span class="laranja">space-between;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde">
+                    /*para colocar espaco entre 
+                    os itens do meio*/</span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex;justify-content: space-between; background-color:  rgba(175, 79, 100, 0.404); width: 85vw;">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                    </span>
+                    <p>space-around = para colocar um espaço entre todos os itens</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">justify-content</span>: <span class="laranja">space-sround;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde">
+                    /*para colocar espaco entre 
+                    todos os itens*/</span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex;justify-content: space-around; background-color: rgba(175, 79, 100, 0.404); width: 85vw;">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                    </span>
+                    <h3>align-itens</h3>
+                        <p>Para alinhar os itens no eixo perpendicular</p>
+                        <p>flex-start = alinha os itens no início da box</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">align-itens</span>: <span class="laranja">flex-start;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-items: flex-start; background-color:  rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                    </span>
+                        <p>flex-end = alinha os itens na base da página</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">align-itens</span>: <span class="laranja">flex-end;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-items: flex-end; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                    </span>
+                        <p>center = alinha itens ao centro</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">align-itens</span>: <span class="laranja">center;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-items: center; background-color:  rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                    </span>
+                    <p>baseline - alinha a base das fontes</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">align-itens</span>: <span class="laranja">baseline;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-items: baseline; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
+                        <div class="bloco-1" style="font-size: 2em;">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3" style="font-size: 3em;">3</div>
+                    </span>
+                    <h3>Flex-wrap</h3>
+                    <p>Quebra de linha de elementos, por padrão ele vem com <span class="ame">flex-wrap: nowrap;</span></p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">nowrap;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-items: center; background-color:  rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                    </span>
+                    <p> wrap: quebra de linha</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-items: center; flex-wrap: wrap; background-color:  rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                    </span>
+                    <p>wrap-reverse: quebra de linha para cima.</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">wrap-reverse;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-items: center; flex-wrap: wrap-reverse; background-color:  rgba(175, 79, 100, 0.404); width: 85vw; height:400px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                        <div class="bloco-2">11</div>
+                        <div class="bloco-3">12</div>
+                        <div class="bloco-1">13</div>
+                        <div class="bloco-2">14</div>
+                        <div class="bloco-3">15</div>
+                        <div class="bloco-1">16</div>
+                        <div class="bloco-2">17</div>
+                        <div class="bloco-3">18</div>
+                    </span>
+                    <h3>align-content</h3>
+                        <p>alinhamento de itens na vertical</p>
+                        <p>flex-start</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+                    <span class="azul">align-content</span>: <span class="laranja">flex-start;</span>
+                    <span class="amarelo">}</span>
+                    <span class="verde"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-content: flex-start; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:300px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                        <div class="bloco-2">11</div>
+                        <div class="bloco-3">12</div>
+                        <div class="bloco-1">13</div>
+                        <div class="bloco-2">14</div>
+                        <div class="bloco-3">15</div>
+                        <div class="bloco-1">16</div>
+                        <div class="bloco-2">17</div>
+                        <div class="bloco-3">18</div>
+                    </span>
+                    <p>flex-end</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+                    <span class="azul">align-content</span>: <span class="laranja">flex-end;</span>
+                    <span class="amarelo">}</span>
+                    <span class="lim"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-content: flex-end; flex-wrap: wrap; background-color:
+                     rgba(175, 79, 100, 0.404); width: 85vw; height:300px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                        <div class="bloco-2">11</div>
+                        <div class="bloco-3">12</div>
+                        <div class="bloco-1">13</div>
+                        <div class="bloco-2">14</div>
+                        <div class="bloco-3">15</div>
+                        <div class="bloco-1">16</div>
+                        <div class="bloco-2">17</div>
+                        <div class="bloco-3">18</div>
+                    </span>
+                    <p>center</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+                    <span class="azul">align-content</span>: <span class="laranja">center;</span>
+                    <span class="amarelo">}</span>
+                    <span class="lim"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-content: center; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:300px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                        <div class="bloco-2">11</div>
+                        <div class="bloco-3">12</div>
+                        <div class="bloco-1">13</div>
+                        <div class="bloco-2">14</div>
+                        <div class="bloco-3">15</div>
+                        <div class="bloco-1">16</div>
+                        <div class="bloco-2">17</div>
+                        <div class="bloco-3">18</div>
+                    </span>
+                    <p>space-between</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+                    <span class="azul">align-content</span>: <span class="laranja">space-between;</span>
+                    <span class="amarelo">}</span>
+                    <span class="lim"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-content: space-between; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:300px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                        <div class="bloco-2">11</div>
+                        <div class="bloco-3">12</div>
+                        <div class="bloco-1">13</div>
+                        <div class="bloco-2">14</div>
+                        <div class="bloco-3">15</div>
+                        <div class="bloco-1">16</div>
+                        <div class="bloco-2">17</div>
+                        <div class="bloco-3">18</div>
+                    </span>
+                    <p>space-around</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+                    <span class="azul">align-content</span>: <span class="laranja">space-sround;</span>
+                    <span class="amarelo">}</span>
+                    <span class="lim"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; align-content: space-around; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:300px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                        <div class="bloco-2">11</div>
+                        <div class="bloco-3">12</div>
+                        <div class="bloco-1">13</div>
+                        <div class="bloco-2">14</div>
+                        <div class="bloco-3">15</div>
+                        <div class="bloco-1">16</div>
+                        <div class="bloco-2">17</div>
+                        <div class="bloco-3">18</div>
+                    </span>
+                    <h3>Gap, row-gap (distância entre linhas) e column-gap (distância entre colunas)</h3>
+                    <p>Espaço entre os elementos</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+                    <span class="azul">gap</span>: <span class="laranja">30px;</span>
+                    <span class="amarelo">}</span>
+                    <span class="lim"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; gap: 30px;  flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vwx; height: 500px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                        <div class="bloco-2">11</div>
+                        <div class="bloco-3">12</div>
+                        <div class="bloco-1">13</div>
+                        <div class="bloco-2">14</div>
+                        <div class="bloco-3">15</div>
+                        <div class="bloco-1">16</div>
+                        <div class="bloco-2">17</div>
+                        <div class="bloco-3">18</div>
+                    </span>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+                    <span class="azul">gap</span>: <span class="laranja">70px;</span>
+                    <span class="amarelo">}</span>
+                    <span class="lim"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; gap: 70px;  flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:900px">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                        <div class="bloco-2">11</div>
+                        <div class="bloco-3">12</div>
+                        <div class="bloco-1">13</div>
+                        <div class="bloco-2">14</div>
+                        <div class="bloco-3">15</div>
+                        <div class="bloco-1">16</div>
+                        <div class="bloco-2">17</div>
+                        <div class="bloco-3">18</div>
+                    </span>
+                    <p>Podemos definir dois valores para o gap, ordem linha e depois colunas.</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+                    <span class="amarelo">.container{</span>
+                    <span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
+                    <span class="azul">gap</span>: <span class="laranja">10px 30px;</span>
+                    <span class="amarelo">}</span>
+                    <span class="lim"></span>
+                            </pre>
+                        </code>
+                    </section>
+                    <span class="container1" style="display: flex; gap: 10px 20px;  flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw;">
+                        <div class="bloco-1">1</div>
+                        <div class="bloco-2">2</div>
+                        <div class="bloco-3">3</div>
+                        <div class="bloco-1">4</div>
+                        <div class="bloco-2">5</div>
+                        <div class="bloco-3">6</div>
+                        <div class="bloco-1">7</div>
+                        <div class="bloco-2">8</div>
+                        <div class="bloco-3">9</div>
+                        <div class="bloco-1">10</div>
+                    </span>
+                    </section>-->
                 </span>
-            
-                <p>space-around = para colocar um espaço entre todos os itens</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">justify-content</span>: <span class="laranja">space-sround;</span>
-<span class="amarelo">}</span>
-<span class="verde">
-/*para colocar espaco entre 
-todos os itens*/</span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex;justify-content: space-around; background-color: rgba(175, 79, 100, 0.404); width: 85vw;">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                </span>
-            
-                <h3>align-itens</h3>
-                    <p>Para alinhar os itens no eixo perpendicular</p>
-            
-                    <p>flex-start = alinha os itens no início da box</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">align-itens</span>: <span class="laranja">flex-start;</span>
-<span class="amarelo">}</span>
-<span class="verde"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; align-items: flex-start; background-color:  rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                </span>
-                    <p>flex-end = alinha os itens na base da página</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">align-itens</span>: <span class="laranja">flex-end;</span>
-<span class="amarelo">}</span>
-<span class="verde"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; align-items: flex-end; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                </span>
-            
-                    <p>center = alinha itens ao centro</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">align-itens</span>: <span class="laranja">center;</span>
-<span class="amarelo">}</span>
-<span class="verde"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; align-items: center; background-color:  rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                </span>
-            
-                <p>baseline - alinha a base das fontes</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">align-itens</span>: <span class="laranja">baseline;</span>
-<span class="amarelo">}</span>
-<span class="verde"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; align-items: baseline; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
-                    <div class="bloco-1" style="font-size: 2em;">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3" style="font-size: 3em;">3</div>
-                </span>
-            
-                <h3>Flex-wrap</h3>
-            
-                <p>Quebra de linha de elementos, por padrão ele vem com <span class="ame">flex-wrap: nowrap;</span></p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">nowrap;</span>
-<span class="amarelo">}</span>
-<span class="verde"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-            
-                <span class="container1" style="display: flex; align-items: center; background-color:  rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-            
-                </span>
-            
-                <p> wrap: quebra de linha</p>
-            
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>
-<span class="amarelo">}</span>
-<span class="verde"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; align-items: center; flex-wrap: wrap; background-color:  rgba(175, 79, 100, 0.404); width: 85vw; height:200px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-            
-                </span>
-            
-                <p>wrap-reverse: quebra de linha para cima.</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">wrap-reverse;</span>
-<span class="amarelo">}</span>
-<span class="verde"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-            
-                <span class="container1" style="display: flex; align-items: center; flex-wrap: wrap-reverse; background-color:  rgba(175, 79, 100, 0.404); width: 85vw; height:400px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-                    <div class="bloco-2">11</div>
-                    <div class="bloco-3">12</div>
-                    <div class="bloco-1">13</div>
-                    <div class="bloco-2">14</div>
-                    <div class="bloco-3">15</div>
-                    <div class="bloco-1">16</div>
-                    <div class="bloco-2">17</div>
-                    <div class="bloco-3">18</div>
-                </span>
-            
-            
-                <h3>align-content</h3>
-            
-                    <p>alinhamento de itens na vertical</p>
-            
-                    <p>flex-start</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
-<span class="azul">align-content</span>: <span class="laranja">flex-start;</span>
-<span class="amarelo">}</span>
-<span class="verde"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; align-content: flex-start; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:300px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-                    <div class="bloco-2">11</div>
-                    <div class="bloco-3">12</div>
-                    <div class="bloco-1">13</div>
-                    <div class="bloco-2">14</div>
-                    <div class="bloco-3">15</div>
-                    <div class="bloco-1">16</div>
-                    <div class="bloco-2">17</div>
-                    <div class="bloco-3">18</div>
-                </span>
-            
-                <p>flex-end</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
-<span class="azul">align-content</span>: <span class="laranja">flex-end;</span>
-<span class="amarelo">}</span>
-<span class="lim"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; align-content: flex-end; flex-wrap: wrap; background-color:
-                 rgba(175, 79, 100, 0.404); width: 85vw; height:300px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-                    <div class="bloco-2">11</div>
-                    <div class="bloco-3">12</div>
-                    <div class="bloco-1">13</div>
-                    <div class="bloco-2">14</div>
-                    <div class="bloco-3">15</div>
-                    <div class="bloco-1">16</div>
-                    <div class="bloco-2">17</div>
-                    <div class="bloco-3">18</div>
-                </span>
-            
-                <p>center</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
-<span class="azul">align-content</span>: <span class="laranja">center;</span>
-<span class="amarelo">}</span>
-<span class="lim"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; align-content: center; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:300px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-                    <div class="bloco-2">11</div>
-                    <div class="bloco-3">12</div>
-                    <div class="bloco-1">13</div>
-                    <div class="bloco-2">14</div>
-                    <div class="bloco-3">15</div>
-                    <div class="bloco-1">16</div>
-                    <div class="bloco-2">17</div>
-                    <div class="bloco-3">18</div>
-                </span>
-            
-                <p>space-between</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
-<span class="azul">align-content</span>: <span class="laranja">space-between;</span>
-<span class="amarelo">}</span>
-<span class="lim"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; align-content: space-between; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:300px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-                    <div class="bloco-2">11</div>
-                    <div class="bloco-3">12</div>
-                    <div class="bloco-1">13</div>
-                    <div class="bloco-2">14</div>
-                    <div class="bloco-3">15</div>
-                    <div class="bloco-1">16</div>
-                    <div class="bloco-2">17</div>
-                    <div class="bloco-3">18</div>
-                </span>
-            
-                <p>space-around</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
-<span class="azul">align-content</span>: <span class="laranja">space-sround;</span>
-<span class="amarelo">}</span>
-<span class="lim"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; align-content: space-around; flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:300px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-                    <div class="bloco-2">11</div>
-                    <div class="bloco-3">12</div>
-                    <div class="bloco-1">13</div>
-                    <div class="bloco-2">14</div>
-                    <div class="bloco-3">15</div>
-                    <div class="bloco-1">16</div>
-                    <div class="bloco-2">17</div>
-                    <div class="bloco-3">18</div>
-                </span>
-            
-                <h3>Gap, row-gap (distância entre linhas) e column-gap (distância entre colunas)</h3>
-            
-                <p>Espaço entre os elementos</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
-<span class="azul">gap</span>: <span class="laranja">30px;</span>
-<span class="amarelo">}</span>
-<span class="lim"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; gap: 30px;  flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vwx; height: 500px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-                    <div class="bloco-2">11</div>
-                    <div class="bloco-3">12</div>
-                    <div class="bloco-1">13</div>
-                    <div class="bloco-2">14</div>
-                    <div class="bloco-3">15</div>
-                    <div class="bloco-1">16</div>
-                    <div class="bloco-2">17</div>
-                    <div class="bloco-3">18</div>
-                </span>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
-<span class="azul">gap</span>: <span class="laranja">70px;</span>
-<span class="amarelo">}</span>
-<span class="lim"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; gap: 70px;  flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw; height:900px">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-                    <div class="bloco-2">11</div>
-                    <div class="bloco-3">12</div>
-                    <div class="bloco-1">13</div>
-                    <div class="bloco-2">14</div>
-                    <div class="bloco-3">15</div>
-                    <div class="bloco-1">16</div>
-                    <div class="bloco-2">17</div>
-                    <div class="bloco-3">18</div>
-                </span>
-            
-                <p>Podemos definir dois valores para o gap, ordem linha e depois colunas.</p>
-            
-                <section class="code-html">
-                    <code>
-                        <pre>
-<span class="amarelo">.container{</span>
-<span class="azul">flex-wrap</span>: <span class="laranja">wrap;</span>   
-<span class="azul">gap</span>: <span class="laranja">10px 30px;</span>
-<span class="amarelo">}</span>
-<span class="lim"></span>
-                        </pre>
-                    </code>
-                </section>
-            
-                <span class="container1" style="display: flex; gap: 10px 20px;  flex-wrap: wrap; background-color: rgba(175, 79, 100, 0.404); width: 85vw;">
-                    <div class="bloco-1">1</div>
-                    <div class="bloco-2">2</div>
-                    <div class="bloco-3">3</div>
-                    <div class="bloco-1">4</div>
-                    <div class="bloco-2">5</div>
-                    <div class="bloco-3">6</div>
-                    <div class="bloco-1">7</div>
-                    <div class="bloco-2">8</div>
-                    <div class="bloco-3">9</div>
-                    <div class="bloco-1">10</div>
-                </span>
-                </section>
             </div>
             <!--**********************************
             Formulários
