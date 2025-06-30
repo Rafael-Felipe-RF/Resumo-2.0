@@ -27,6 +27,7 @@
                     <li><a href="#css">CSS's</a></li>
                     <li><a href="#flexbox">Flex-Box</a></li>
                     <li><a href="#formularios">Formulários</a></li>
+                    <li><a href="#java">JavaScript</a></li>
                     <li><a href="#sites">Sites Úteis</a></li>
                 </ul>
             </details>
@@ -42,6 +43,7 @@
             <li><a href="#css">CSS's</a></li>
             <li><a href="#flexbox">Flex-Box</a></li>
             <li><a href="#formularios">Formulários</a></li>
+            <li><a href="#java">JavaScript</a></li>
             <li><a href="#sites">Sites Úteis</a></li>
         </div>
     </header>
@@ -1128,16 +1130,193 @@ Feedback&lt;<span class="azul">/button</span>&gt;
                     <li><span class="ama">Step="derfina uma numeração"</span>: é para definir o intervalo de números. ex: <strong><span class="azul">step</span>=<span class="ama">"0.1"</span></strong></li>
                 </ul>
             </div>
+
+            <!--****************************************
+            conteúdo JavaScript
+            *******************************************-->
+            <div id="java">
+                <h1>JavaScript (.js)</h1>
+                    <p>let é uma variável que pode sofrer alterações</p>
+                    <p>const é uma constante e não pode sofrer alterações</p>
+                    <p>Tipos de dados:
+                        <ul>
+                            <li>10 - Número</li>
+                            <li>"Rafael" - String (String's são escritas entre aspas, duplas ou simples)</li>
+                            <li>true ou false - dados booleanos</li>
+                            <li>null - nulo</li>
+                            <li>undefined - indefinido</li>
+                        </ul>
+                    </p>
+                    <p>A diferença entre nulo e indefinido é que nulo é definido pelo programador, undefined é definido pelo computador.</p>
+
+                    <p>Exemplo de variável, ou constante:</p>
+                    <section class="code-html">
+                        <code>
+                            <pre>
+<span class="azul">const idade</span> = 5;
+                            </pre>
+                        </code>
+                    </section>
+                    <p>
+                        <ul>
+                            <li>const é a definição de variável ou constante.</li>
+                            <li>idade é o identificador.</li>
+                            <li>O sinal de (=) é a atribuição. Ele atribui o valor após o sinal com o identificador. </li>
+                            <li>O número (5) é o valor do identificador.</li>
+                        </ul>
+                    </p>
+
+                    <p>Regras para identificadores:
+                        <ul>
+                            <li>Devem começar com, uma letra ou ($) ou underline.</li>
+                            <li>Devem ser compostos por letras, ou ($) ou underline.</li>
+                            <li>Não podem ser palavras reservadas pelo JavaScript.</li>
+                        </ul>
+                    </p>
+
+                    <h3>Operadores aritméticos</h3>
+
+                    <ul>
+                        <li>Para adição use (+) sinal de mais.</li>
+                        <li>Para subtração use (-) sinal de menos.</li>
+                        <li>Para multiplicação use (*) asterisco.</li>
+                        <li>Para divisão use (/) barra.</li>
+                        <li>Para módulo use o sinal (%) porcentagem, esse exibe o resto em uma divisão.</li>
+                        <li>Para adicionar mais um, incrementar, usa o sinal (++) dois sinais de mais.</li>
+                        <li>Para retirar um, decrementar, usa (--) dois sinais de menos.</li>
+                    </ul>
+                    <p>Se o resto da divisão for 1 (Um) o número é impar, se for 0 (Zero) o número é par.</p>
+
+                    <h3>Operadores de comparação</h3>
+
+                    <ul>
+                        <li>Maior que (&gt;);</li>
+                        <li>Menor que (&lt;);</li>
+                        <li>Maior ou igua à (&gt;=);</li>
+                        <li>Menor ou igua à (&lt; =)</li>
+                        <li>Igual à (==)</li>
+                        <li>Diferente (!=)</li>
+                    </ul>
+
+                    <h3>Operadores lógicos</h3>
+                    
+                    <ul>
+                        <li>Operador E (&&);</li>
+                        <li>Operador ou (||);</li>
+                        <li>Operador não (!);</li>    
+                    </ul>
+
+                    <p>Tabela Verdade:</p>
+
+                    <p>Para o operador (E) somente se as duas condições forem verdadeiras que o resultado é verdadeiro.</p>
+
+                    <table class="tabela-java">
+                        
+                            <thead>
+                                <th>condição 1</th>
+                                <th>operador</th>
+                                <th>condição 2</th>
+                                <th>é igual</th>
+                                <th>resultado</th>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="true">True</td>
+                                    <td>&&</td>
+                                    <td class="true">True</td>
+                                    <td>=</td>
+                                    <td class="true">True</td>
+                                </tr>
+                                <tr>
+                                    <td class="true">True</td>
+                                    <td>&&</td>
+                                    <td class="false">False</td>
+                                    <td>=</td>
+                                    <td class="false">False</td>
+                                </tr>
+                                 <tr>
+                                    <td class="false">False</td>
+                                    <td>&&</td>
+                                    <td class="true">True</td>
+                                    <td>=</td>
+                                    <td class="false">False</td>
+                                </tr>
+                                 <tr>
+                                    <td class="false">False</td>
+                                    <td>&&</td>
+                                    <td class="false">False</td>
+                                    <td>=</td>
+                                    <td class="false">False</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    <p>Para o operador (Ou) somente se as duas condições forem falsas que o resultado é falso.</p>
+
+                     <table class="tabela-java">
+                        
+                            <thead>
+                                <th>condição 1</th>
+                                <th>operador</th>
+                                <th>condição 2</th>
+                                <th>é igual</th>
+                                <th>resultado</th>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="true">True</td>
+                                    <td>||</td>
+                                    <td class="true">True</td>
+                                    <td>=</td>
+                                    <td class="true">True</td>
+                                </tr>
+                                <tr>
+                                    <td class="true">True</td>
+                                    <td>||</td>
+                                    <td class="false">False</td>
+                                    <td>=</td>
+                                    <td class="true">True</td>
+                                </tr>
+                                 <tr>
+                                    <td class="false">False</td>
+                                    <td>||</td>
+                                    <td class="true">True</td>
+                                    <td>=</td>
+                                    <td class="true">True</td>
+                                </tr>
+                                 <tr>
+                                    <td class="false">False</td>
+                                    <td>||</td>
+                                    <td class="false">False</td>
+                                    <td>=</td>
+                                    <td class="false">False</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                
+                    <p>O Operador não (!) ele inverte o valor. <br>
+                        Exemplo: !<span class="true">True</span> (lê se não<span class="true">True</span>) valor <span class="false">False</span>
+                    </p>
+              
+
+            </div>
+
             <!--*************************************
             Lista de sites úteis
             ***********************-->
             <div id="sites">
+               <h1>Sites Úteis</h1>
+               
                 <ul>
                     <li><a href="https://cssgradient.io/" target="_blank">Gerador de Gradiente em CSS</a></li>
                     <li><a href="https://bennettfeely.com/clippy/" target="_blank">Gerador de formas em CSS</a></li>
                     <li><a href="https://getwaves.io/" target="_blank">Gerador de "ondas"</a></li>
                 </ul>
             </div>
+            
 
         </div>
  
