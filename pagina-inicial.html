@@ -28,6 +28,7 @@
                     <li><a href="#flexbox">Flex-Box</a></li>
                     <li><a href="#formularios">Formulários</a></li>
                     <li><a href="#java">JavaScript</a></li>
+                    <li><a href="#mysql">MySql</a></li>
                     <li><a href="#sites">Sites Úteis</a></li>
                 </ul>
             </details>
@@ -44,6 +45,7 @@
             <li><a href="#flexbox">Flex-Box</a></li>
             <li><a href="#formularios">Formulários</a></li>
             <li><a href="#java">JavaScript</a></li>
+            <li><a href="#mysql">MySql</a></li>
             <li><a href="#sites">Sites Úteis</a></li>
         </div>
     </header>
@@ -1206,7 +1208,7 @@ Feedback&lt;<span class="azul">/button</span>&gt;
                         <li>Operador não (!);</li>    
                     </ul>
 
-                    <p>Tabela Verdade:</p>
+                    <h2>Tabela Verdade:</h2>
 
                     <p>Para o operador (E) somente se as duas condições forem verdadeiras que o resultado é verdadeiro.</p>
 
@@ -1304,6 +1306,78 @@ Feedback&lt;<span class="azul">/button</span>&gt;
 
             </div>
 
+             <!--MySql-->
+            <div id="mysql">
+                <h1>MySql</h1>
+                <h2>Criando o Banco de Dados</h2>
+                <p>Para começar devemos criar o banco de dados, com o comando abaixo</p>
+                <img src="Imagens/mysql/create-database.png" alt="comando para criar um banco de dados ">
+                <h2>Criando uma tabela</h2>
+                <p>Para cirar uma tabela devemos usar o comando <strong>create table</strong>, para usar esse comando, o banco de dados onde será adicionada a tabela deve estar selecionado, ou clicando duas vezes no banco de dados ou usando o comando "use (nome do banco)".</p>
+                
+                <img src="Imagens/mysql/criar-tabela.png" alt="a imagem mostra o esquema para criar uma tabela em um banco de dados, com o comando use mais o nome do banco de dados, o comando create table mais o nome especificado, e os campos da tabela com os seus tipos primitivos.">
+
+                <p>Sempre ao criar uma tabela use o parâmetro "IF NOT EXISTS" para não correr o risco de sobrescrever uma tabela.</p>
+
+                <img src="Imagens/mysql/if-not.png" alt="a imagem mostra o comando If Not Exists, parâmetro para criar uma tabela nova">
+                <h2>Tipos Primitivos</h2>
+
+                <table class="tabela-tipos-primitivos">
+                        <tr>
+                            <td rowspan="4">Numérico</td>
+                        </tr>
+                        <tr>
+                            <td>Inteiro</td>
+                            <td>TinyInt, SmallInt, Int, MediumInt, BigInt</td>
+                        </tr>
+                        <tr>
+                            <td>Real</td>
+                            <td>Decimal, Float, Double, Real</td>
+                        </tr>
+                        <tr>
+                            <td>Lógico</td>
+                            <td>Bit, Boolean</td>
+                        </tr>
+                        <tr>
+                            <td>Data/Tempo</td>
+                            <td colspan="2">Date, DateTime, TimeStamp, Time, Year</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5">Literal</td>
+                        </tr>
+                        <tr>
+                            <td>Caractere</td>
+                            <td>Char, VarChar</td>
+                        </tr>
+                        <tr>
+                            <td>Texto</td>
+                            <td>TinyText, Text, MediumText, LongText</td>
+                        </tr>
+                        <tr>
+                            <td>Binário</td>
+                            <td>TinyBlob, Blob, MediumBlob, LongBlob</td>
+                        </tr>
+                        <tr>
+                            <td>Coleção</td>
+                            <td>Enum, Set</td>
+                        </tr>
+                        <tr>
+                            <td>Espacial</td>
+                            <td colspan="2">Geometry, Point, Polygon, MultiPolygon </td>
+                        </tr>                    
+                </table>
+
+                <h2>Alter Table</h2>
+
+                <img src="Imagens/mysql/alter-table.png" alt="a imagem mostra os comandos basicos de alter table">
+
+                <h2>Comando Update, Delete e Truncate</h2>
+
+                <img src="Imagens/mysql/update.png" alt="a imagem mostra os comandos para atualizar linhas e colunas das tabelas, o comando delete para apagar uma linha de uma tabela e o comando truncate, que apaga todas as linhas da tabela, deixando apenas o cabecalho">
+
+
+            </div>
+
             <!--*************************************
             Lista de sites úteis
             ***********************-->
@@ -1316,6 +1390,8 @@ Feedback&lt;<span class="azul">/button</span>&gt;
                     <li><a href="https://getwaves.io/" target="_blank">Gerador de "ondas"</a></li>
                 </ul>
             </div>
+
+           
             
 
         </div>
