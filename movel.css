@@ -301,6 +301,13 @@
         text-align: center;
     }
 
+    /***********************************************
+    Estilização imagens SQL
+    ************************************/
+    .imagem-sql{
+        width: 95vw;
+    }
+
     
 
     /************************************
@@ -308,10 +315,11 @@
     ********************************/
     .tabela-java, th, td{
         border: 2px solid black;
-        padding: 10px;
+        padding: 3px;
         margin: 5px;
         border-collapse: collapse;
         text-align: center;
+        
     }
 
     .true{
