@@ -1378,6 +1378,50 @@ Feedback&lt;<span class="azul">/button</span>&gt;
                 <h2>Comandos Select</h2>
 
                 <img class="imagem-sql" src="Imagens/mysql/select1.png" alt="A imagem mostra vários comandos Select">
+                
+
+                <h2>Modelo Relacional</h2>
+                <p>O modelo relacional em SQL é uma forma de organizar dados em tabelas, onde as informações são armazenadas em linhas e colunas, e os relacionamentos entre os dados são representados por chaves primárias e estrangeiras.</p>
+
+                <img src="Imagens/mysql/modelo-entidade-atributo.png" alt="">
+
+                <img src="Imagens/mysql/modelo-relacional.png" alt="A imagem mostra o diagrama DER-Diagrama entidade relacionamento">
+
+                <h3>Chave Estrangeira</h3>
+                <p>Quando os dados de uma planilha são exportados para outra planilha, a chave primária de uma das tabelas, se torna chave estrangeira, há regras específicas para cada tipo de relacionamento que será explicada á seguir.</p>
+
+                <h3>Tipos de Relacionamentos</h3>
+
+                <h3><em>1 - Relacionamento muitos para muitos</em></h3>
+                <p>O relacionamento muitos para muitos no modelo relacional em SQL ocorre quando várias linhas de uma tabela podem se relacionar com várias linhas de outra. Para representá-lo, utiliza-se uma tabela intermediária que contém chaves estrangeiras apontando para as duas tabelas relacionadas.</p>
+
+                <picture>
+                    <source media="(max-width: 600px)" srcset="Imagens/mysql/muitos-para-muitos-PQ.png">
+                    <img src="Imagens/mysql/muitos-para-muitos-FULL.png" alt="">
+                </picture>
+
+                <p>Cada usuário pode assistir muitos cursos, e muitos cursos podem ser assistidos por muitos usuários.</p>
+                <p><em>Chave Estrangeira</em> - Nesse modelo </p>
+
+                <h3><em>2 - Relacionamento um para muitos</em></h3>
+
+                <picture>
+                    <source media="(max-width: 600px)" srcset="Imagens/mysql/um-para-muitos-PQ.png">
+                    <img src="Imagens/mysql/um-para-muitos-GD.png" alt="">
+                </picture>
+
+                <p>Um pai pode cuidar de muitos filhos, mas cada filho só pode ser cuidado por um pai.</p>
+                <p><em>Chave Estrangeira</em> - A chave primária do lado (1) é tranferida para o lado (N) como Chave Estrangeira</p>
+
+                <h3><em>3 - Relacionamento um para um</em></h3>
+
+                <picture>
+                    <source media="(max-width: 600px)" srcset="Imagens/mysql/um-para-um-PQ.png">
+                    <img src="Imagens/mysql/um-para-um-GD.png" alt="">
+                </picture>
+
+                <p>Cada Marido só pode se casar com uma esposa, e cada esposa só pode se casar com um marido.</p>
+                <p><em>Chave Estrangeira</em> - Nesse modelo deve ser definido uma entidade dominante, e tranfere a chave primaria da não-dominante como Chave Estrangeira</p>
 
 
             </div>
