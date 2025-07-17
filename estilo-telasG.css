@@ -321,7 +321,7 @@
             
     }
 
-       /****************************************
+    /****************************************
     Estilização tabela tipos primitivos
     ***************************************/
 
@@ -333,7 +333,62 @@
         text-align: center;
     }
 
-      /************************************
+     /********************************
+    Estilização caixas ACID
+    *************************************/
+
+    .ACID{
+        display: flex;
+        gap: 10px; /* Espaço entre as caixas */        
+    }
+
+    .box {
+        width: 200px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white; /* Cor do texto */
+        font-weight: bold;
+        font-size: 100px; /* Tamanho da fonte para tentar preencher a caixa */
+        overflow: hidden; /* Garante que a letra não transborde */
+        position: relative; /* Necessário para posicionar o pseudo-elemento */
+    }
+
+    .box span {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 1; 
+        font-size: 150px;
+        white-space: nowrap; 
+        pointer-events: none; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    }
+
+    /* Cores distintas para cada caixa */
+    .box.a {
+        background-color: #FF5733; /* Laranja */
+        display: flex;
+        flex-direction: column;
+    }
+    .box.c {
+        background-color: #234b2a; /* Verde */
+    }
+    .box.i {
+        background-color: #3357FF; /* Azul */
+    }
+    .box.d {
+        background-color: #FF33A8; /* Rosa */
+    }
+
+    .texto-titulo{
+        font-size: 20px;
+        margin-top: 200px;
+    }
+
+   /************************************
     Estilização tabela Java
     ********************************/
     .tabela-java, th, td{

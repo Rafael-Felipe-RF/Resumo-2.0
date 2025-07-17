@@ -1431,6 +1431,33 @@ Feedback&lt;<span class="azul">/button</span>&gt;
                 <p>Cada Marido só pode se casar com uma esposa, e cada esposa só pode se casar com um marido.</p>
                 <p><em>Chave Estrangeira</em> - Nesse modelo deve ser definido uma entidade dominante, e tranfere a chave primaria da não-dominante como Chave Estrangeira</p>
 
+                <h2>Transações</h2>
+
+                <p>Tudo que você possa pedir para um banco de dados e ele executa é considerado uma transação.</p>
+                <p>As 4 principais regras de uma transação são:</p>
+
+                    <section class="ACID">
+                        <section class="box a">
+                            <span>A</span>
+                            <p class="texto-titulo"><ins>Atomicidade</ins> Uma transação deve ser atômica, ou seja ela não pode ser dividida em sub-tarefas. </p>
+                        </section>
+
+                        <section class="box c">
+                            <span>C</span>
+                            <p class="texto-titulo"><ins>Consistência</ins> <br> Um banco de dados que estava consistente, deve permanecer consistente após a transação.</p>
+                        </section>
+
+                        <section class="box i">
+                            <span>I</span>
+                            <p class="texto-titulo"><ins>Isolamento</ins> Quando duas transações estão sendo ecexutadas, elas devem acontecer isoladamente.</p>
+                        </section>
+
+                        <section class="box d">
+                            <span>D</span>
+                            <p class="texto-titulo"><ins>Durabilidade</ins> <br>Uma transação deve ser armazenada pelo tempo que for necessário.</p>
+                        </section>
+                    </section>
+
 
             </div>
 
